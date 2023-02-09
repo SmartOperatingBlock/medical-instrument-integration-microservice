@@ -9,7 +9,7 @@
 package entities
 
 /**
- * Object that represents the telemetry data.
+ * Represents the telemetry data retrieved from a telemetry system.
  * @param bodyTemperature the temperature of the body.
  * @param saturation the saturation of the blood.
  * @param respirationRate the respiration rate of a person.
