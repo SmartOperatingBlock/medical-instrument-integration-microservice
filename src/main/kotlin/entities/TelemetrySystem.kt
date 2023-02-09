@@ -24,10 +24,10 @@ class TelemetrySystem(
  * The id of the telemetry system.
  * @param id the id of the telemetry system.
  */
-data class TelemetrySystemID(val id: Int)
+data class TelemetrySystemID(val id: String)
 
 /**
  * The id of the patient in the operating room.
  * @param id the id of the patient.
  */
-data class PatientID(val id: Int)
+data class PatientID(val id: String)
