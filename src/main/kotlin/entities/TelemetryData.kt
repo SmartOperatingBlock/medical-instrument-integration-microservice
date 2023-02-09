@@ -33,7 +33,7 @@ object TelemetryData {
     data class RespirationRate(val breathPerMinute: Int)
 
     /**
-     * Represent the blood pressure of a person.
+     * Represents the blood pressure of a person.
      * @param diastolicBloodPressure the diastolic blood pressure.
      * @param systolicBloodPressure the systolic blood pressure.
      * @param bloodPressureUnit the blood pressure unit.
@@ -43,6 +43,12 @@ object TelemetryData {
         val systolicBloodPressure: Int,
         val bloodPressureUnit: UnitOfMeasurement.BloodPressureUnit
     )
+
+    /**
+     * Represents the hearth beat of a person.
+     * @param beatPerMinute the beat per minute.
+     */
+    data class HeartBeat(val beatPerMinute: Int)
 
     /**
      * Object that contains enum for unit of measurement.
