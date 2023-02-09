@@ -1,0 +1,146 @@
+name: Build & Deploy
+
+on:
+  push:
+    paths-ignore:
+      - '.gitignore'
+      - '.mergify.yml'
+      - 'CHANGELOG.md'
+      - 'LICENSE'
+      - 'README.md'
+      - 'renovate.json'
+  pull_request:
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Validate the Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v1.0.5
+  build:
+    needs:
+      - validation
+    strategy:
+        matrix:
+          os: [ubuntu, macos, windows]
+          java-version: [11, 17]
+    runs-on: ${{ matrix.os }}-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: adopt
+      - name: Run quality assurance and test with coverage
+        run: ./gradlew clean check
+      - name: CodeCov
+        uses: codecov/codecov-action@v3.1.1
+        with:
+          directory: "build/reports/jacoco"
+  release:
+    concurrency:
+        # Allow only one release at a time.
+        group: release-${{ github.event.number || github.ref }}
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    outputs:
+      release-status: ${{ env.release_status }}
+      release-version: ${{ env.release_version }}
+    # Release only where secrets are available.
+    if: >-
+      !github.event.repository.fork
+      && (
+        github.event_name != 'pull_request'
+        || github.event.pull_request.head.repo.full_name == github.repository
+      )
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.DEPLOYMENT_TOKEN }}
+          submodules: recursive
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
+        run: |
+          npm install
+          npx semantic-release
+  docker-image-delivery:
+    needs:
+      - release
+    runs-on: ubuntu-latest
+    if: needs.release.outputs.release-status == 'released'
+    env:
+      REGISTRY: ghcr.io
+      IMAGE_NAME: ${{ github.repository }}
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Login to GitHub Container registry
+        uses: docker/login-action@v2.1.0
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - id: full-image-name
+        run: echo "image-name=${{env.REGISTRY}}/${{env.IMAGE_NAME}}" | tr '[:upper:]' '[:lower:]' >> $GITHUB_OUTPUT
+      - name: Build and push the image to GitHub Container registry
+        uses: docker/build-push-action@v4.0.0
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.full-image-name.outputs.image-name }}:latest, ${{ steps.full-image-name.outputs.image-name }}:${{ needs.release.outputs.release-version }}
+  documentation-deploy:
+    needs:
+      - release
+    runs-on: ubuntu-latest
+    # Update documentation only when there is a new release
+    if: needs.release.outputs.release-status == 'released'
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Generate Documentation
+        run: ./gradlew dokkaHtml
+      - name: Deploy documentation on GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          keep_files: true
+          publish_dir: ./build/dokka/html
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'docs: update documentation'
+  success:
+    runs-on: ubuntu-22.04
+    needs:
+      - build
+      - release
+      - docker-image-delivery
+      - documentation-deploy
+    if: >-
+      always() && (
+        contains(join(needs.*.result, ','), 'failure')
+        || !contains(join(needs.*.result, ','), 'cancelled')
+      )
+    steps:
+      - name: Verify that there were no failures
+        run: ${{ !contains(join(needs.*.result, ','), 'failure') }}
