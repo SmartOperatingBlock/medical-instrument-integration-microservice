@@ -13,15 +13,24 @@ package entities
  */
 object TelemetryData {
     /**
+     * Represent the body temperature.
+     * @param temperature the value of temperature.
+     * @param temperatureUnit the used unit of measurement of the temperature.
+     */
+    data class BodyTemperature(val temperature: Double, val temperatureUnit: UnitOfMeasurement.TemperatureUnit)
+
+    /**
      * Object that contains enum for unit of measurement.
      */
     object UnitOfMeasurement {
+
         /**
          * Enum class for blood pressure unit.
          */
         enum class BloodPressureUnit {
             MMHG
         }
+
         /**
          * Enum class for temperature unit.
          */
