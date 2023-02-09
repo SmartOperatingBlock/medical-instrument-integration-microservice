@@ -14,7 +14,7 @@ package entities
  * @param saturation the saturation of the blood.
  * @param respirationRate the respiration rate of a person.
  * @param heartBeat the heartbeat of a person.
- * @param bloodPressure the pressure of the blood. 
+ * @param bloodPressure the pressure of the blood.
  */
 class TelemetryData(
     val bodyTemperature: BodyTemperature,
@@ -35,7 +35,17 @@ data class BodyTemperature(val temperature: Double, val temperatureUnit: UnitOfM
  * Represents the blood oxygen level.
  * @param percentage the percentage of saturation.
  */
-data class Saturation(val percentage: Int)
+data class Saturation(val percentage: Int) {
+    init {
+        validatePercentage(percentage)
+    }
+
+    /**
+     * Check that the percentage is between 0 and 100.
+     * @param percentage the percentage.
+     */
+    private fun validatePercentage(percentage: Int) = require(percentage in 1..100)
+}
 
 /**
  * Represents how many times a person breathes in a minute.
