@@ -13,14 +13,14 @@ package entities
  * @param bodyTemperature the temperature of the body.
  * @param saturation the saturation of the blood.
  * @param respirationRate the respiration rate of a person.
- * @param heartBeat the heartbeat of a person.
+ * @param heartbeat the heartbeat of a person.
  * @param bloodPressure the pressure of the blood.
  */
 class TelemetryData(
     val bodyTemperature: BodyTemperature,
     val saturation: Saturation,
     val respirationRate: RespirationRate,
-    val heartBeat: HeartBeat,
+    val heartbeat: Heartbeat,
     val bloodPressure: BloodPressure
 )
 
@@ -51,7 +51,7 @@ data class Saturation(val percentage: Int) {
  * Represents how many times a person breathes in a minute.
  * @param breathPerMinute the number of breath in one minute.
  */
-data class RespirationRate(val breathPerMinute: Int)
+data class RespirationRate(val breathPerMinute: Double)
 
 /**
  * Represents the blood pressure of a person.
@@ -69,7 +69,7 @@ data class BloodPressure(
  * Represents the hearth beat of a person.
  * @param beatPerMinute the beat per minute.
  */
-data class HeartBeat(val beatPerMinute: Int)
+data class Heartbeat(val beatPerMinute: Double)
 
 /**
  * Object that contains enum for unit of measurement.
