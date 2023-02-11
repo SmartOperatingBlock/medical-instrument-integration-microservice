@@ -6,31 +6,31 @@
  * https://opensource.org/licenses/MIT.
  */
 
-package presenter
+package application.presenter.deserializer
+import application.presenter.deserializer.TelemetrySystemJsonKeys.BEAT_PER_MINUTE
+import application.presenter.deserializer.TelemetrySystemJsonKeys.BLOOD_PRESSURE
+import application.presenter.deserializer.TelemetrySystemJsonKeys.BLOOD_PRESSURE_UNIT
+import application.presenter.deserializer.TelemetrySystemJsonKeys.BODY_TEMPERATURE
+import application.presenter.deserializer.TelemetrySystemJsonKeys.BREATH_PER_MINUTE
+import application.presenter.deserializer.TelemetrySystemJsonKeys.DIASTOLIC_BLOOD_PRESSURE
+import application.presenter.deserializer.TelemetrySystemJsonKeys.PATIENT_ID
+import application.presenter.deserializer.TelemetrySystemJsonKeys.SATURATION
+import application.presenter.deserializer.TelemetrySystemJsonKeys.SYSTOLIC_BLOOD_PRESSURE
+import application.presenter.deserializer.TelemetrySystemJsonKeys.TELEMETRY_SYSTEM_ID
+import application.presenter.deserializer.TelemetrySystemJsonKeys.TEMPERATURE
+import application.presenter.deserializer.TelemetrySystemJsonKeys.TEMPERATURE_UNIT
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import entities.BloodPressure
 import entities.BodyTemperature
 import entities.Heartbeat
+import entities.MedicalInstrumentID
 import entities.PatientID
 import entities.RespirationRate
 import entities.Saturation
 import entities.TelemetryData
 import entities.TelemetrySystem
-import entities.TelemetrySystemID
 import entities.UnitOfMeasurement
-import presenter.JsonKeys.BEAT_PER_MINUTE
-import presenter.JsonKeys.BLOOD_PRESSURE
-import presenter.JsonKeys.BLOOD_PRESSURE_UNIT
-import presenter.JsonKeys.BODY_TEMPERATURE
-import presenter.JsonKeys.BREATH_PER_MINUTE
-import presenter.JsonKeys.DIASTOLIC_BLOOD_PRESSURE
-import presenter.JsonKeys.PATIENT_ID
-import presenter.JsonKeys.SATURATION
-import presenter.JsonKeys.SYSTOLIC_BLOOD_PRESSURE
-import presenter.JsonKeys.TELEMETRY_SYSTEM_ID
-import presenter.JsonKeys.TEMPERATURE
-import presenter.JsonKeys.TEMPERATURE_UNIT
 
 /**
  * A json deserializer.
@@ -38,16 +38,16 @@ import presenter.JsonKeys.TEMPERATURE_UNIT
 object JsonDeserializer {
 
     /**
-     * A json deserializer implementation.
+     * A json deserializer implementation for Telemetry System.
      */
-    class JsonDeserializer : Deserializer {
+    class TelemetrySystemJsonDeserializer : Deserializer<String, TelemetrySystem> {
 
         /**
          * Deserializes the json returning an instance of [TelemetrySystem].
          */
         override fun deserialize(data: String): TelemetrySystem {
             val jsonObject = Gson().fromJson(data, JsonObject::class.java)
-            val telemetrySystemId = TelemetrySystemID(jsonObject.getTelemetrySystemID())
+            val telemetrySystemId = MedicalInstrumentID(jsonObject.getTelemetrySystemID())
             val patientID = PatientID(jsonObject.getPatientID())
             val bodyTemperature = BodyTemperature(
                 jsonObject.getBodyTemperature(),

@@ -6,12 +6,12 @@
  * https://opensource.org/licenses/MIT.
  */
 
-package presenter
+package application.presenter.deserializer
 
 /**
  * Maintains all the keys present in the json.
  */
-object JsonKeys {
+object TelemetrySystemJsonKeys {
 
     /**
      * The key of the patient id in the json.

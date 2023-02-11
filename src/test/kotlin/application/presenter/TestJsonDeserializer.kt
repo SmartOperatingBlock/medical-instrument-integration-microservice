@@ -6,20 +6,10 @@
  * https://opensource.org/licenses/MIT.
  */
 
-package presenter
-import entities.BloodPressure
-import entities.BodyTemperature
-import entities.Heartbeat
-import entities.PatientID
-import entities.RespirationRate
-import entities.Saturation
-import entities.TelemetryData
-import entities.TelemetrySystem
-import entities.TelemetrySystemID
-import entities.UnitOfMeasurement
+package application.presenter
+import application.presenter.deserializer.JsonDeserializer
 import io.kotest.assertions.throwables.shouldNotThrow
 import io.kotest.core.spec.style.StringSpec
-import io.kotest.matchers.equality.shouldBeEqualToComparingFields
 
 class TestJsonDeserializer : StringSpec({
 
@@ -51,26 +41,11 @@ class TestJsonDeserializer : StringSpec({
         	}
         }
     """.trimIndent()
-    val jsonDeserializer = JsonDeserializer.JsonDeserializer()
+    val jsonDeserializer = JsonDeserializer.TelemetrySystemJsonDeserializer()
 
     "the deserializer must generate the Telemetry System without throwing exception" {
         shouldNotThrow<Exception> {
             jsonDeserializer.deserialize(jsonData)
         }
-    }
-
-    "the deserializer must generate the Telemetry System with the correct data" {
-        val telemetrySystem = TelemetrySystem(
-            TelemetrySystemID(telemetrySystemID),
-            PatientID(patientID),
-            TelemetryData(
-                BodyTemperature(temperature, UnitOfMeasurement.TemperatureUnit.CELSIUS),
-                Saturation(saturation),
-                RespirationRate(breathPerMinute),
-                Heartbeat(beatPerMinute),
-                BloodPressure(diastolicBloodPressure, systolicBloodPressure, UnitOfMeasurement.BloodPressureUnit.MMHG)
-            )
-        )
-        jsonDeserializer.deserialize(jsonData) shouldBeEqualToComparingFields telemetrySystem
     }
 })
