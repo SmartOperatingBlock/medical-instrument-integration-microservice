@@ -1,3 +1,58 @@
+## 1.0.0 (2023-02-11)
+
+
+### Features
+
+* create a controller for medical instrument ([099c975](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/099c975476a17d332a8e506b787de5faa33cff49))
+* create json deserializer for telemetry data ([bbc1946](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/bbc1946436e1faca6de3a9da29f018365cc2d1ca))
+* create jsonPatchSerializer ([b837378](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/b8373784c5633c63e851c615c998719422b9b549))
+* create manager for medical instrument to pulish data on azure digital twin plaftorm ([dc546e5](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/dc546e58fd8856017835d905303a5eb6bb29e944))
+* create receiver of medical instrument data ([742082b](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/742082b566cdac3fc8f159c23c74c22697c2297e))
+* create telemetry system class ([62b59a8](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/62b59a82a7c5d2f858875eb73d5916046262cbfd))
+* create telemetrydata class ([bfdc4e2](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/bfdc4e2603aed20a7523df928762c89d262cee8a))
+
+
+### Bug Fixes
+
+* correct expected string in serialization test ([2fdb4ee](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/2fdb4ee7e50eda1e0e8c1696ed56fd5c8dd86269))
+
+
+### Refactoring
+
+* change some variables name ([d65e519](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/d65e5193d616c3c6ef39fd810b457609b8b8958b))
+* move deserializer in application.presenter package ([82a08a2](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/82a08a2447b565c4e0d5ff91a94cb3932e8d6bbc))
+
+
+### General maintenance
+
+* add azure dependencies ([878c215](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/878c215652c3a8fca186f71afa3d7d039cb213e6))
+* add blood pressure data class ([c8d6857](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/c8d68570ae9d2a796bc50278544fd78ac5c4b75f))
+* add data class for body temperature ([3a4aeb8](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/3a4aeb851821eb59d9fb39360d3af53c57744246))
+* add enums for unit of measurement ([7eaa25b](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/7eaa25b21de9c47c97c37812a7d94f8d3418098d))
+* add Gson dependency ([558fffe](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/558fffeb92e6659c5342d251b973fa75c3c53b1a))
+* add heart beat data class ([3b0f699](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/3b0f69994fa22e01c72f7ee576c3904374fe1593))
+* add respiration rate data class ([122fe5d](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/122fe5d37b07c55aa5385a22e5973ae9778f31cd))
+* add saturation data class ([f6c0eea](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/f6c0eeabd7aea4b5a5f7aed274399dfcdab5d576))
+* add simple simulation of data received from a third-party system about medical instrument ([9e0022f](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/9e0022f8fb23b7c15b67ab312a9b037042de00be))
+* add test for telemetry data ([211d0ea](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/211d0ea6ba153d348da7f2e89254cb21c62cea65))
+* add validation of percentage in saturation class ([a1cef0e](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/a1cef0ee618faa7ca1ef7e88b6a829f4ae33a583))
+* change project name ([b051360](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/b051360c44412b5922a423a3278270bce996527b))
+* create interface for a serializer ([48fa92f](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/48fa92f5e38bb12a5e0d04ee57e564aa913055f5))
+* create interface for medical instrument managament ([611889f](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/611889f8ec13baed676cc5a33228fa3a03f4bdf3))
+* create interface of a deserializer ([3dd67d4](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/3dd67d455c1c78c73123a83dcf6a597ec7c0d165))
+* create object to manage jsonPatch path ([ea3900f](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/ea3900fd9f03c4aa278cc1b722b31eed93c149a7))
+* create object with all key of a telemetry data json ([ff93575](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/ff93575aa95c00ae7ee9ac1cd9fee265c4467a25))
+* delete sample test class ([97e77f0](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/97e77f0ca22b4c14ae59bb227ba8905b12fe413f))
+* modify a comment ([ea20594](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/ea20594af68aa27e352309875da5bb744a4ce690))
+* move medicalInstrumentID and PatientID to MedicalInstrument ([930d517](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/930d517f0ea9872f5695259d6138d84599897ea7))
+* now telemetrySystemID and patientID are string instead int ([2fd628f](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/2fd628f3f3822f5c71b7a23cc331217601157f10))
+* update readme ([9fa3cba](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/9fa3cbad63dd2110efbe5857dd35d2378f3a240a))
+
+
+### Build and continuous integration
+
+* edit workflow to publish doc in kdoc directory ([b318faf](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/b318fafac189b929263596f4cadaa35f393846c0))
+
 ## [0.1.1](https://github.com/SmartOperatingBlock/kotlin-template-project/compare/0.1.0...0.1.1) (2023-02-06)
 
 
