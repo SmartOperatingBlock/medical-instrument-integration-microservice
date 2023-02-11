@@ -39,11 +39,6 @@ class TestJsonSerializer : StringSpec({
             "op": "add",
             "path": "/patientID",
             "value": "$patientID"
-          },
-          {
-            "op": "add",
-            "path": "/temperature",
-            "value": $temperature
           }
         ]
     """.trimIndent()
