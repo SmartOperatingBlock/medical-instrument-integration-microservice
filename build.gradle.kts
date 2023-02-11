@@ -22,6 +22,8 @@ repositories {
 dependencies {
     implementation(libs.kotlin.stdlib)
     implementation(libs.google.gson)
+    implementation(libs.azure.identity)
+    implementation(libs.azure.digitaltwins)
     testImplementation(libs.bundles.kotlin.testing)
 }
 
