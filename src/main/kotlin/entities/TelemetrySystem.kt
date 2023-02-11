@@ -15,19 +15,7 @@ package entities
  * @param telemetryData the telemetry data retrieved from the telemetry system.
  */
 class TelemetrySystem(
-    val telemetrySystemID: TelemetrySystemID,
-    val patientID: PatientID,
+    override val medicalInstrumentID: MedicalInstrumentID,
+    override val patientID: PatientID,
     val telemetryData: TelemetryData
-)
-
-/**
- * The id of the telemetry system.
- * @param id the id of the telemetry system.
- */
-data class TelemetrySystemID(val id: String)
-
-/**
- * The id of the patient in the operating room.
- * @param id the id of the patient.
- */
-data class PatientID(val id: String)
+) : MedicalInstrument
