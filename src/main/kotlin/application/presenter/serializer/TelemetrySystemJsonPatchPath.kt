@@ -52,5 +52,4 @@ object TelemetrySystemJsonPatchPath {
      * The path of the temperature of the body in the jsonPatch.
      */
     const val BODY_TEMPERATURE = "/body_temperature"
-
 }
