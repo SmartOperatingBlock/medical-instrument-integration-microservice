@@ -57,10 +57,10 @@ class DigitalTwinMedicalInstrumentManager : MedicalInstrumentManager<JsonPatchDo
      * @param medicalInstrumentID the id of the digital twin to update.
      * @param command the json with the instruction to update the digital twin.
      */
-    override fun update(medicalInstrumentID: String, medicalInstrument: MedicalInstrument) {
+    override fun update(medicalInstrument: MedicalInstrument) {
         val command = createCommand(medicalInstrument)
         println("command = $command")
-        client.updateDigitalTwin(medicalInstrumentID, command)
+        client.updateDigitalTwin(medicalInstrument.patientID.id, command)
     }
 
     /**

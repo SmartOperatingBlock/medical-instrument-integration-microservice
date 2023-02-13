@@ -17,8 +17,7 @@ interface MedicalInstrumentManager<T> {
 
     /**
      * Integrate the medical instrument Data in our system.
-     * @param medicalInstrumentID the id of the medical instrument.
-     * @param command the command to integrate the medical instrument.
+     * @param medicalInstrument the medical instrument with updated data.
      */
-    fun update(medicalInstrumentID: String, medicalInstrument: MedicalInstrument)
+    fun update(medicalInstrument: MedicalInstrument)
 }

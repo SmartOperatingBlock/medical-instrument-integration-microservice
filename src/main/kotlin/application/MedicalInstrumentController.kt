@@ -22,6 +22,6 @@ class MedicalInstrumentController(private val manager: MedicalInstrumentManager<
     fun medicalInstrumentDataReceived(data: String) {
         val deserializer = JsonDeserializer.TelemetrySystemJsonDeserializer()
         val medicalInstrument = deserializer.deserialize(data)
-        manager.update(medicalInstrument.medicalInstrumentID.id, medicalInstrument)
+        manager.update(medicalInstrument)
     }
 }
