@@ -19,23 +19,6 @@ fun main() {
     val medicalInstrumentManager = DigitalTwinMedicalInstrumentManager()
     val medicalInstrumentController = MedicalInstrumentController(medicalInstrumentManager)
     val medicalInstrumentDataReceiver = MedicalInstrumentDataReceiver(medicalInstrumentController)
-    val telemetrySystemData = """
-        {
-            "telemetrySystemID": "TelemetrySystem",
-            "patientID" : "patient1", 
-            "beatPerMinute" : 30, 
-            "bloodPressure" : {
-                "diastolicBloodPressure" : 1000, 
-                "systolicBloodPressure" : 2000, 
-                "bloodPressureUnit" : mmhg
-            }, 
-            "breathPerMinute" : 20, 
-            "saturation" : 20, 
-            "bodyTemperature" : {
-                "temperature" : 36.5,
-                "temperatureUnit" : "celsius"
-            }
-        }
-    """.trimIndent()
-    medicalInstrumentDataReceiver.receiveTelemetrySystemData(telemetrySystemData)
+    val thirdPartySystemSimulator = ThirdPartySystemSimulator(medicalInstrumentDataReceiver)
+    thirdPartySystemSimulator.startSimulator()
 }
