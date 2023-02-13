@@ -14,62 +14,43 @@ package application.presenter.serializer
 object TelemetrySystemJsonPatchPath {
 
     /**
-     * The path of the patient id in the jsonPatch.
-     */
-    const val PATIENT_ID = "/patientID"
-
-    /**
-     * The path of the telemetry system id in the jsonPatch.
-     */
-    const val TELEMETRY_SYSTEM_ID = "/telemetrySystemID"
-
-    /**
      * The path of the heartbeat value in the jsonPatch.
      */
-    const val BEAT_PER_MINUTE = "/beatPerMinute"
+    const val BEAT_PER_MINUTE = "/heart_beat"
 
     /**
      * The path of the blood pressure in the jsonPatch.
      */
-    const val BLOOD_PRESSURE = "/bloodPressure"
+    const val BLOOD_PRESSURE = "/blood_pressure"
 
     /**
      * The path of the diastolic blood pressure in the jsonPatch.
      */
-    const val DIASTOLIC_BLOOD_PRESSURE = "/diastolicBloodPressure"
+    const val DIASTOLIC_BLOOD_PRESSURE = "/blood_pressure/diastolic_blood_pressure"
 
     /**
      * The path of the systolic blood pressure in the jsonPatch.
      */
-    const val SYSTOLIC_BLOOD_PRESSURE = "/systolicBloodPressure"
+    const val SYSTOLIC_BLOOD_PRESSURE = "/blood_pressure/systolic_blood_pressure"
 
     /**
      * The path of the blood pressure unit of measurement in the jsonPatch.
      */
-    const val BLOOD_PRESSURE_UNIT = "/bloodPressureUnit"
+    const val BLOOD_PRESSURE_UNIT = "/blood_pressure/unit"
 
     /**
      * The path of the respiration rate in the jsonPatch.
      */
-    const val BREATH_PER_MINUTE = "/breathPerMinute"
+    const val BREATH_PER_MINUTE = "/respiratory_rate"
 
     /**
      * The path of the saturation value in the jsonPatch.
      */
-    const val SATURATION = "/saturation"
+    const val SATURATION = "/saturation_percentage"
 
     /**
      * The path of the temperature of the body in the jsonPatch.
      */
-    const val BODY_TEMPERATURE = "/bodyTemperature"
+    const val BODY_TEMPERATURE = "/body_temperature"
 
-    /**
-     * The path of the temperature value in the jsonPatch.
-     */
-    const val TEMPERATURE = "/temperature"
-
-    /**
-     * The path of the temperature unit of measurement in the jsonPatch.
-     */
-    const val TEMPERATURE_UNIT = "/temperatureUnit"
 }

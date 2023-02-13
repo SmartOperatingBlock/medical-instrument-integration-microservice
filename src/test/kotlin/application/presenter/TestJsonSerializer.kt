@@ -27,19 +27,50 @@ class TestJsonSerializer : StringSpec({
 
     val telemetrySystemID = "telSys1"
     val patientID = "patient1"
-    val beatPerMinute = 120.0
+    val beatPerMinute = 120
     val diastolicBloodPressure = 1000
     val systolicBloodPressure = 2000
-    val breathPerMinute = 60.0
+    val breathPerMinute = 60
     val saturation = 70
-    val temperature = 36.0
+    val temperature = 36.5
+    val bloodPressureUnit = "mmhg"
     val jsonPatch = """
         [
-          {
-            "op": "add",
-            "path": "/patientID",
-            "value": "$patientID"
-          }
+            {
+                "op": "add",
+                "path": "/blood_pressure/systolic_blood_pressure",
+                "value": $systolicBloodPressure
+            },
+            {
+                "op": "add",
+                "path": "/blood_pressure/diastolic_blood_pressure",
+                "value": $diastolicBloodPressure
+            },
+            {
+                "op": "add",
+                "path": "/blood_pressure/unit",
+                "value": "$bloodPressureUnit"
+            },
+            {
+                "op": "add",
+                "path": "/body_temperature",
+                "value": $temperature
+            },
+            {
+                "op": "add",
+                "path": "/heart_beat",
+                "value": $beatPerMinute
+            },
+            {
+                "op": "add",
+                "path": "/respiratory_rate",
+                "value": $breathPerMinute
+            },
+            {
+                "op": "add",
+                "path": "/saturation_percentage",
+                "value": $saturation
+            }      
         ]
     """.trimIndent()
     val telemetrySystem = TelemetrySystem(
