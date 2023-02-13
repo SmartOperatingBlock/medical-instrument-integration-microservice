@@ -19,11 +19,6 @@ object TelemetrySystemJsonPatchPath {
     const val BEAT_PER_MINUTE = "/heart_beat"
 
     /**
-     * The path of the blood pressure in the jsonPatch.
-     */
-    const val BLOOD_PRESSURE = "/blood_pressure"
-
-    /**
      * The path of the diastolic blood pressure in the jsonPatch.
      */
     const val DIASTOLIC_BLOOD_PRESSURE = "/blood_pressure/diastolic_blood_pressure"
