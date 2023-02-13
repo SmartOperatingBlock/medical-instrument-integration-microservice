@@ -51,7 +51,7 @@ data class Saturation(val percentage: Int) {
  * Represents how many times a person breathes in a minute.
  * @param breathPerMinute the number of breath in one minute.
  */
-data class RespirationRate(val breathPerMinute: Double)
+data class RespirationRate(val breathPerMinute: Int)
 
 /**
  * Represents the blood pressure of a person.
@@ -69,7 +69,7 @@ data class BloodPressure(
  * Represents the hearth beat of a person.
  * @param beatPerMinute the beat per minute.
  */
-data class Heartbeat(val beatPerMinute: Double)
+data class Heartbeat(val beatPerMinute: Int)
 
 /**
  * Object that contains enum for unit of measurement.

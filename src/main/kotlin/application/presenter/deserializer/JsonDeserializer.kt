@@ -79,7 +79,7 @@ object JsonDeserializer {
     /**
      * Gets the heartbeat from [JsonObject].
      */
-    private fun JsonObject.getBeatPerMinute(): Double = this[BEAT_PER_MINUTE].asDouble
+    private fun JsonObject.getBeatPerMinute(): Int = this[BEAT_PER_MINUTE].asInt
 
     /**
      * Gets the blood saturation from [JsonObject].
@@ -107,7 +107,7 @@ object JsonDeserializer {
     /**
      * Gets the respiration rate from [JsonObject].
      */
-    private fun JsonObject.getBreathPerMinute(): Double = this[BREATH_PER_MINUTE].asDouble
+    private fun JsonObject.getBreathPerMinute(): Int = this[BREATH_PER_MINUTE].asInt
 
     /**
      * Gets the body temperature from [JsonObject].
