@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2023. Smart Operating Block
+ *
+ * Use of this source code is governed by an MIT-style
+ * license that can be found in the LICENSE file or at
+ * https://opensource.org/licenses/MIT.
+ */
+
 import entities.PatientID
 import infrastructure.MedicalInstrumentDataReceiver
 import kotlin.concurrent.timer
@@ -83,7 +91,6 @@ class ThirdPartySystemSimulator(private val medicalInstrumentDataReceiver: Medic
                         "bloodPressure" : {
                             "diastolicBloodPressure" : ${Random.nextInt(MIN_DIASTOLIC_BLOOD_PRESSURE, MAX_DIASTOLIC_BLOOD_PRESSURE)}, 
                             "systolicBloodPressure" : ${Random.nextInt(MIN_SYSTOLIC_BLOOD_PRESSURE, MAX_SYSTOLIC_BLOOD_PRESSURE)}, 
-                            "bloodPressureUnit" : "mmhg"
                         }, 
                         "breathPerMinute" : ${Random.nextInt(MIN_BREATH_PER_MINUTE, MAX_BREATH_PER_MINUTE)}, 
                         "saturation" : ${Random.nextInt(MIN_SATURATION, MAX_SATURATION)}, 

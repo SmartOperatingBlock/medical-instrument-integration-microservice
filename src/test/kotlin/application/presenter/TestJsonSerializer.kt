@@ -33,23 +33,17 @@ class TestJsonSerializer : StringSpec({
     val breathPerMinute = 60
     val saturation = 70
     val temperature = 36.5
-    val bloodPressureUnit = "mmhg"
     val jsonPatch = """
         [
             {
                 "op": "add",
-                "path": "/blood_pressure/systolic_blood_pressure",
+                "path": "/systolic_blood_pressure",
                 "value": $systolicBloodPressure
             },
             {
                 "op": "add",
-                "path": "/blood_pressure/diastolic_blood_pressure",
+                "path": "/diastolic_blood_pressure",
                 "value": $diastolicBloodPressure
-            },
-            {
-                "op": "add",
-                "path": "/blood_pressure/unit",
-                "value": "$bloodPressureUnit"
             },
             {
                 "op": "add",
@@ -81,7 +75,7 @@ class TestJsonSerializer : StringSpec({
             Saturation(saturation),
             RespirationRate(breathPerMinute),
             Heartbeat(beatPerMinute),
-            BloodPressure(diastolicBloodPressure, systolicBloodPressure, UnitOfMeasurement.BloodPressureUnit.MMHG)
+            BloodPressure(diastolicBloodPressure, systolicBloodPressure)
         )
     )
     val jsonSerializer = JsonPatchSerializer.TelemetrySystemJSONPatchSerializer()

@@ -44,11 +44,6 @@ object TelemetrySystemJsonKeys {
     const val SYSTOLIC_BLOOD_PRESSURE = "systolicBloodPressure"
 
     /**
-     * The key of the blood pressure unit of measurement in the json.
-     */
-    const val BLOOD_PRESSURE_UNIT = "bloodPressureUnit"
-
-    /**
      * The key of the respiration rate in the json.
      */
     const val BREATH_PER_MINUTE = "breathPerMinute"

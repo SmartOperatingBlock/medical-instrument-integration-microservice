@@ -9,7 +9,6 @@
 package application.presenter.deserializer
 import application.presenter.deserializer.TelemetrySystemJsonKeys.BEAT_PER_MINUTE
 import application.presenter.deserializer.TelemetrySystemJsonKeys.BLOOD_PRESSURE
-import application.presenter.deserializer.TelemetrySystemJsonKeys.BLOOD_PRESSURE_UNIT
 import application.presenter.deserializer.TelemetrySystemJsonKeys.BODY_TEMPERATURE
 import application.presenter.deserializer.TelemetrySystemJsonKeys.BREATH_PER_MINUTE
 import application.presenter.deserializer.TelemetrySystemJsonKeys.DIASTOLIC_BLOOD_PRESSURE
@@ -44,6 +43,7 @@ object JsonDeserializer {
 
         /**
          * Deserializes the json returning an instance of [TelemetrySystem].
+         *
          */
         override fun deserialize(data: String): TelemetrySystem {
             val jsonObject = Gson().fromJson(data, JsonObject::class.java)
@@ -59,7 +59,6 @@ object JsonDeserializer {
             val bloodPressure = BloodPressure(
                 jsonObject.getDiastolicBloodPressure(),
                 jsonObject.getSystolicBloodPressure(),
-                UnitOfMeasurement.BloodPressureUnit.valueOf(jsonObject.getBloodPressureUnit().uppercase())
             )
             val telemetryData = TelemetryData(bodyTemperature, saturation, respirationRate, heartbeat, bloodPressure)
             return TelemetrySystem(telemetrySystemId, patientID, telemetryData)
@@ -97,12 +96,6 @@ object JsonDeserializer {
      */
     private fun JsonObject.getSystolicBloodPressure(): Int =
         this[BLOOD_PRESSURE].asJsonObject[SYSTOLIC_BLOOD_PRESSURE].asInt
-
-    /**
-     * Gets the blood pressure unit from [JsonObject].
-     */
-    private fun JsonObject.getBloodPressureUnit(): String =
-        this[BLOOD_PRESSURE].asJsonObject[BLOOD_PRESSURE_UNIT].asString
 
     /**
      * Gets the respiration rate from [JsonObject].

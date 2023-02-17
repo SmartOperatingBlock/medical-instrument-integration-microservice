@@ -57,12 +57,10 @@ data class RespirationRate(val breathPerMinute: Int)
  * Represents the blood pressure of a person.
  * @param diastolicBloodPressure the diastolic blood pressure.
  * @param systolicBloodPressure the systolic blood pressure.
- * @param bloodPressureUnit the blood pressure unit.
  */
 data class BloodPressure(
     val diastolicBloodPressure: Int,
     val systolicBloodPressure: Int,
-    val bloodPressureUnit: UnitOfMeasurement.BloodPressureUnit
 )
 
 /**
@@ -75,13 +73,6 @@ data class Heartbeat(val beatPerMinute: Int)
  * Object that contains enum for unit of measurement.
  */
 object UnitOfMeasurement {
-
-    /**
-     * Enum class for blood pressure unit.
-     */
-    enum class BloodPressureUnit {
-        MMHG
-    }
 
     /**
      * Enum class for temperature unit.

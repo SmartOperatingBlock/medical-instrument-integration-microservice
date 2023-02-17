@@ -21,17 +21,12 @@ object TelemetrySystemJsonPatchPath {
     /**
      * The path of the diastolic blood pressure in the jsonPatch.
      */
-    const val DIASTOLIC_BLOOD_PRESSURE = "/blood_pressure/diastolic_blood_pressure"
+    const val DIASTOLIC_BLOOD_PRESSURE = "/diastolic_blood_pressure"
 
     /**
      * The path of the systolic blood pressure in the jsonPatch.
      */
-    const val SYSTOLIC_BLOOD_PRESSURE = "/blood_pressure/systolic_blood_pressure"
-
-    /**
-     * The path of the blood pressure unit of measurement in the jsonPatch.
-     */
-    const val BLOOD_PRESSURE_UNIT = "/blood_pressure/unit"
+    const val SYSTOLIC_BLOOD_PRESSURE = "/systolic_blood_pressure"
 
     /**
      * The path of the respiration rate in the jsonPatch.
