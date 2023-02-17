@@ -17,6 +17,7 @@ group = "io.github.smartoperatingblock"
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://maven.pkg.jetbrains.space/public/p/ktor/eap") }
 }
 
 dependencies {
@@ -24,7 +25,13 @@ dependencies {
     implementation(libs.google.gson)
     implementation(libs.azure.identity)
     implementation(libs.azure.digitaltwins)
+    implementation(libs.ktor.core)
+    implementation(libs.ktor.netty)
     testImplementation(libs.bundles.kotlin.testing)
+}
+
+application {
+    mainClass.set("io.ktor.server.netty.EngineMain")
 }
 
 kotlin {
