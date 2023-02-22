@@ -6,7 +6,7 @@
  * https://opensource.org/licenses/MIT.
  */
 
-package infrastructure
+package infrastructure.digitaltwin
 import application.MedicalInstrumentManager
 import application.presenter.serializer.JsonPatchSerializer
 import com.azure.core.models.JsonPatchDocument
