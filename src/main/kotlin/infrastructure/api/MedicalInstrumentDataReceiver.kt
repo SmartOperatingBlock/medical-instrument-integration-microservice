@@ -6,19 +6,53 @@
  * https://opensource.org/licenses/MIT.
  */
 
-package infrastructure
+package infrastructure.api
 
 import application.MedicalInstrumentController
+import infrastructure.Provider
+import io.ktor.http.HttpStatusCode
+import io.ktor.server.application.Application
+import io.ktor.server.application.call
+import io.ktor.server.engine.embeddedServer
+import io.ktor.server.netty.Netty
+import io.ktor.server.request.receiveText
+import io.ktor.server.response.respond
+import io.ktor.server.routing.post
+import io.ktor.server.routing.routing
 
 /**
  * This class is used for receiving data, collected by medical instrument, from a third party system.
  */
-class MedicalInstrumentDataReceiver(private val controller: MedicalInstrumentController) {
+class MedicalInstrumentDataReceiver {
+
+    /**
+     * Starts ktor embedded server.
+     */
+    fun start() {
+        embeddedServer(Netty, port = 3000, module = this::dispatcher).start(true)
+    }
+
+    /**
+     * Dispatcher for http requests.
+     */
+    fun dispatcher(app: Application) {
+        with(app) {
+            receiveTelemetrySystemData(this)
+        }
+    }
 
     /**
      * Receive data about telemetry system.
      */
-    fun receiveTelemetrySystemData(data: String) {
-        controller.medicalInstrumentDataReceived(data)
+    private fun receiveTelemetrySystemData(app: Application) {
+        with(app) {
+            routing {
+                post("/telemetrySystem") {
+                    MedicalInstrumentController(Provider.digitalTwinMedicalInstrumentManager)
+                        .medicalInstrumentDataReceived(call.receiveText())
+                    call.respond(HttpStatusCode.OK)
+                }
+            }
+        }
     }
 }
