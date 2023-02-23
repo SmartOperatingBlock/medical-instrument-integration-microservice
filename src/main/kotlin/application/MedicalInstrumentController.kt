@@ -8,20 +8,20 @@
 
 package application
 
-import application.presenter.deserializer.JsonDeserializer
 import com.azure.core.models.JsonPatchDocument
+import entities.TelemetrySystem
+import usecase.repository.TelemetrySystemRepository
 
 /**
  * A controller for medical instrument.
  */
-class MedicalInstrumentController(private val manager: MedicalInstrumentManager<JsonPatchDocument>) {
+class MedicalInstrumentController(
+    private val manager: MedicalInstrumentManager<JsonPatchDocument>
+) : TelemetrySystemRepository {
 
     /**
-     * Received data about a medical instrument.
+     * Updates the telemetry system.
      */
-    fun medicalInstrumentDataReceived(data: String) {
-        val deserializer = JsonDeserializer.TelemetrySystemJsonDeserializer()
-        val medicalInstrument = deserializer.deserialize(data)
-        manager.update(medicalInstrument)
-    }
+    override fun updateTelemetrySystem(telemetrySystem: TelemetrySystem): Boolean =
+        manager.updateMedicalInstrumentDigitalTwin(telemetrySystem)
 }

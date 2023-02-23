@@ -12,6 +12,7 @@ import application.presenter.serializer.JsonPatchSerializer
 import com.azure.core.models.JsonPatchDocument
 import com.azure.digitaltwins.core.DigitalTwinsClient
 import com.azure.digitaltwins.core.DigitalTwinsClientBuilder
+import com.azure.digitaltwins.core.implementation.models.ErrorResponseException
 import com.azure.identity.ClientSecretCredentialBuilder
 import entities.MedicalInstrument
 import entities.TelemetrySystem
@@ -57,10 +58,14 @@ class DigitalTwinMedicalInstrumentManager : MedicalInstrumentManager<JsonPatchDo
      * @param medicalInstrumentID the id of the digital twin to update.
      * @param command the json with the instruction to update the digital twin.
      */
-    override fun update(medicalInstrument: MedicalInstrument) {
-        val command = createCommand(medicalInstrument)
-        println("command = $command")
-        client.updateDigitalTwin(medicalInstrument.patientID.id, command)
+    override fun updateMedicalInstrumentDigitalTwin(medicalInstrument: MedicalInstrument): Boolean {
+        return try {
+            client.updateDigitalTwin(medicalInstrument.patientID.id, createCommand(medicalInstrument))
+            true
+        } catch (e: ErrorResponseException) {
+            println(e)
+            false
+        }
     }
 
     /**
