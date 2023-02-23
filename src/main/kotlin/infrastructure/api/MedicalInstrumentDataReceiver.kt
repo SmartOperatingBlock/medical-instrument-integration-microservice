@@ -9,6 +9,7 @@
 package infrastructure.api
 
 import application.MedicalInstrumentController
+import application.presenter.deserializer.JsonDeserializer
 import infrastructure.Provider
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.Application
@@ -48,9 +49,14 @@ class MedicalInstrumentDataReceiver {
         with(app) {
             routing {
                 post("/telemetrySystem") {
-                    MedicalInstrumentController(Provider.digitalTwinMedicalInstrumentManager)
-                        .medicalInstrumentDataReceived(call.receiveText())
-                    call.respond(HttpStatusCode.OK)
+                    if (MedicalInstrumentController(Provider.digitalTwinMedicalInstrumentManager)
+                            .updateTelemetrySystem(
+                                JsonDeserializer.TelemetrySystemJsonDeserializer().deserialize(call.receiveText()))
+                    ) {
+                        call.respond(HttpStatusCode.OK)
+                    } else {
+                        call.respond(HttpStatusCode.Conflict)
+                    }
                 }
             }
         }
