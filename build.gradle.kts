@@ -27,6 +27,9 @@ dependencies {
     implementation(libs.azure.digitaltwins)
     implementation(libs.ktor.core)
     implementation(libs.ktor.netty)
+    implementation(libs.hapi.fhir.structures.r4)
+    implementation(libs.hapi.fhir.base)
+    implementation(libs.hapi.fhir.structures.dstu2)
     testImplementation(libs.bundles.kotlin.testing)
 }
 
