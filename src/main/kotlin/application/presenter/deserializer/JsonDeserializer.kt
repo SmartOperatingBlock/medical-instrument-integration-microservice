@@ -7,19 +7,7 @@
  */
 
 package application.presenter.deserializer
-import application.presenter.deserializer.TelemetrySystemJsonKeys.BEAT_PER_MINUTE
-import application.presenter.deserializer.TelemetrySystemJsonKeys.BLOOD_PRESSURE
-import application.presenter.deserializer.TelemetrySystemJsonKeys.BODY_TEMPERATURE
-import application.presenter.deserializer.TelemetrySystemJsonKeys.BREATH_PER_MINUTE
-import application.presenter.deserializer.TelemetrySystemJsonKeys.DIASTOLIC_BLOOD_PRESSURE
-import application.presenter.deserializer.TelemetrySystemJsonKeys.PATIENT_ID
-import application.presenter.deserializer.TelemetrySystemJsonKeys.SATURATION
-import application.presenter.deserializer.TelemetrySystemJsonKeys.SYSTOLIC_BLOOD_PRESSURE
-import application.presenter.deserializer.TelemetrySystemJsonKeys.TELEMETRY_SYSTEM_ID
-import application.presenter.deserializer.TelemetrySystemJsonKeys.TEMPERATURE
-import application.presenter.deserializer.TelemetrySystemJsonKeys.TEMPERATURE_UNIT
-import com.google.gson.Gson
-import com.google.gson.JsonObject
+import ca.uhn.fhir.context.FhirContext
 import entities.BloodPressure
 import entities.BodyTemperature
 import entities.Heartbeat
@@ -29,7 +17,7 @@ import entities.RespirationRate
 import entities.Saturation
 import entities.TelemetryData
 import entities.TelemetrySystem
-import entities.UnitOfMeasurement
+import org.hl7.fhir.r4.model.Observation
 
 /**
  * A json deserializer.
@@ -39,78 +27,42 @@ object JsonDeserializer {
     /**
      * A json deserializer implementation for Telemetry System.
      */
-    class TelemetrySystemJsonDeserializer : Deserializer<String, TelemetrySystem> {
+    class TelemetrySystemHl7JsonDeserializer : Deserializer<String, TelemetrySystem> {
 
         /**
          * Deserializes the json returning an instance of [TelemetrySystem].
          *
          */
         override fun deserialize(data: String): TelemetrySystem {
-            val jsonObject = Gson().fromJson(data, JsonObject::class.java)
-            val telemetrySystemId = MedicalInstrumentID(jsonObject.getTelemetrySystemID())
-            val patientID = PatientID(jsonObject.getPatientID())
-            val bodyTemperature = BodyTemperature(
-                jsonObject.getBodyTemperature(),
-                UnitOfMeasurement.TemperatureUnit.valueOf(jsonObject.getTemperatureUnit().uppercase())
+            val parser = FhirContext.forR4().newJsonParser()
+            val observation = parser.parseResource(Observation::class.java, data)
+            val telemetrySystemId = MedicalInstrumentID(observation.device.reference)
+            val patientID = PatientID(observation.subject.reference)
+            val bodyTemperature =
+                BodyTemperature(observation.getValueFromCode(HL7VitalParameters.BODY_TEMPERATURE.code).toDouble())
+            val saturation = Saturation(
+                observation.getValueFromCode(HL7VitalParameters.OXYGEN_SATURATION_IN_ARTERIAL_BLOOD.code).toInt()
             )
-            val saturation = Saturation(jsonObject.getSaturation())
-            val respirationRate = RespirationRate(jsonObject.getBreathPerMinute())
-            val heartbeat = Heartbeat(jsonObject.getBeatPerMinute())
-            val bloodPressure = BloodPressure(
-                jsonObject.getDiastolicBloodPressure(),
-                jsonObject.getSystolicBloodPressure(),
-            )
+            val respirationRate =
+                RespirationRate(observation.getValueFromCode(HL7VitalParameters.RESPIRATION_RATE.code).toInt())
+            val heartbeat = Heartbeat(observation.getValueFromCode(HL7VitalParameters.HEART_RATE.code).toInt())
+            val systolicBloodPressure =
+                observation.getValueFromCode(HL7VitalParameters.SYSTOLIC_BLOOD_PRESSURE.code).toInt()
+            val diastolicBloodPressure =
+                observation.getValueFromCode(HL7VitalParameters.DIASTOLIC_BLOOD_PRESSURE.code).toInt()
+            val bloodPressure = BloodPressure(diastolicBloodPressure, systolicBloodPressure)
             val telemetryData = TelemetryData(bodyTemperature, saturation, respirationRate, heartbeat, bloodPressure)
             return TelemetrySystem(telemetrySystemId, patientID, telemetryData)
         }
     }
 
     /**
-     * Gets the patient id from [JsonObject].
+     * Maps code of a parameter with its value.
      */
-    private fun JsonObject.getPatientID(): String = this[PATIENT_ID].asString
+    private fun Observation.listOfCodes() =
+        component.map {
+            it.code.coding.first().code
+        }
 
-    /**
-     * Gets the telemetry system id from [JsonObject].
-     */
-    private fun JsonObject.getTelemetrySystemID(): String = this[TELEMETRY_SYSTEM_ID].asString
-
-    /**
-     * Gets the heartbeat from [JsonObject].
-     */
-    private fun JsonObject.getBeatPerMinute(): Int = this[BEAT_PER_MINUTE].asInt
-
-    /**
-     * Gets the blood saturation from [JsonObject].
-     */
-    private fun JsonObject.getSaturation(): Int = this[SATURATION].asInt
-
-    /**
-     * Gets the diastolic blood pressure from [JsonObject].
-     */
-    private fun JsonObject.getDiastolicBloodPressure(): Int =
-        this[BLOOD_PRESSURE].asJsonObject[DIASTOLIC_BLOOD_PRESSURE].asInt
-
-    /**
-     * Gets the systolic blood pressure from [JsonObject].
-     */
-    private fun JsonObject.getSystolicBloodPressure(): Int =
-        this[BLOOD_PRESSURE].asJsonObject[SYSTOLIC_BLOOD_PRESSURE].asInt
-
-    /**
-     * Gets the respiration rate from [JsonObject].
-     */
-    private fun JsonObject.getBreathPerMinute(): Int = this[BREATH_PER_MINUTE].asInt
-
-    /**
-     * Gets the body temperature from [JsonObject].
-     */
-    private fun JsonObject.getBodyTemperature(): Double =
-        this[BODY_TEMPERATURE].asJsonObject[TEMPERATURE].asDouble
-
-    /**
-     * Gets the temperature unit from [JsonObject].
-     */
-    private fun JsonObject.getTemperatureUnit(): String =
-        this[BODY_TEMPERATURE].asJsonObject[TEMPERATURE_UNIT].asString
+    private fun Observation.getValueFromCode(code: String) = component[listOfCodes().indexOf(code)].valueQuantity.value
 }

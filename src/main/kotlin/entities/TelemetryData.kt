@@ -29,7 +29,10 @@ class TelemetryData(
  * @param temperature the value of temperature.
  * @param temperatureUnit the used unit of measurement of the temperature.
  */
-data class BodyTemperature(val temperature: Double, val temperatureUnit: UnitOfMeasurement.TemperatureUnit)
+data class BodyTemperature(
+    val temperature: Double,
+    val temperatureUnit: UnitOfMeasurement.TemperatureUnit = UnitOfMeasurement.TemperatureUnit.CELSIUS
+)
 
 /**
  * Represents the blood oxygen level.
