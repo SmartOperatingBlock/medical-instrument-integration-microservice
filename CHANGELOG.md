@@ -1,3 +1,64 @@
+## [1.1.0](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/compare/1.0.0...1.1.0) (2023-02-28)
+
+
+### Features
+
+* add simple third-party data simulator ([f5980a2](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/f5980a28584eab8be5994c309a3eabfc6d91b3cc))
+* implement hapi fhir deserializer ([c302512](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/c302512dcae7d8f60756d5b617ce94134febc090))
+
+
+### Dependency updates
+
+* **deps:** update com.azure ([d6e388f](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/d6e388f761b7bbec9ab071ce00b7d55d572341d7))
+* **deps:** update dependency com.azure:azure-identity to v1.8.0 ([5ae3817](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/5ae38176c35248b4fc47acfcfb1eeb0af2619ae7))
+* **deps:** update dependency gradle to v8 ([b80c28e](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/b80c28e8852deaaffd8db2fc247682e8ef39f48c))
+* **deps:** update dependency gradle to v8.0.1 ([961fc41](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/961fc41eec604176cc8b797a754969fc24681db1))
+* **deps:** update plugin kotlin-qa to v0.34.0 ([e7b2f6d](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/e7b2f6d1e65d22484cd27ecc89c1696c151be2f0))
+* **deps:** update plugin kotlin-qa to v0.34.1 ([429b8b3](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/429b8b388c768ec3f022ac30f8e03fe66dc53c0f))
+* **deps:** update plugin kotlin-qa to v0.34.2 ([5816e15](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/5816e151780c1283b3001d1c4e84e2af5e6bf851))
+* **deps:** update plugin kotlin-qa to v0.35.0 ([0977648](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/0977648988fb44960a53b48715d4c8c50105a936))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.2 ([478cc26](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/478cc269d305b1f7a36ff4091c5d6cf0affe9949))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.3 ([3ff9066](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/3ff9066b1a61b43cf1c6c058e50a7a2af82610d7))
+
+
+### Build and continuous integration
+
+* **deps:** update gradle/wrapper-validation-action action to v1.0.6 ([93381e0](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/93381e00c319d8391cd89210da60d2fc02d40b5c))
+* integrate documentation and release and delivery actions ([83adfdd](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/83adfdd4f5ebc6ef60102119704e539099ee131d))
+
+
+### General maintenance
+
+* add archunit dependencies ([96b7af1](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/96b7af1022468d100aede3cd53366564d8b828e8))
+* add hapi fhir dependencies ([2589a94](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/2589a94f7520d91475e566d42cbbc845d400d715))
+* add idea uiDesigner to gitignore ([2e13f93](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/2e13f93f87b93099eb2042c9695e6c7e9299ed05))
+* add ktor conf file ([fe61d28](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/fe61d281f599845117c1e36a9b9852f6cca2e828))
+* add ktor dependencies ([4883692](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/48836927f2e47465957889b20bb9acc09ab46749))
+* add return status code ([4f18339](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/4f18339a6fad701847d34bb7e94e6c545acfb7ca))
+* change type of heartbeat and respiration rate to Int ([48c997a](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/48c997a6ee74b506074812303f7a96983e6b8047))
+* create provider for digital twin manager ([3ffabee](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/3ffabeef0d607f6ebf173c31499e3533dca8fe45))
+* delete blood pressure unit concepts ([576a373](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/576a373c53ddf14808ef26a7afdb0c6c5750050d))
+* delete unused path ([1333667](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/1333667089470cc678d30fea0106f8101a9bd185))
+* delete useless blank line ([3c1692b](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/3c1692ba8bdc1aeadd8f8d9ba591b7a382ea26db))
+* edit json string ([1b9c8bb](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/1b9c8bb3f26b92a2d683246c016173f5a7dfa3bf))
+* now update method take only the medical instrument as parameter ([8130500](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/8130500fb00032b41de0ff66e1227638dc1228ab))
+* rename main class ([cdc52ef](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/cdc52efd2d74bf7580aaa0bf016a2604db288e2c))
+* set ktor to receive information from a telemetry system ([1dcbd0f](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/1dcbd0fca31e26f3d4f531b3ccceedd4c830ba41))
+* update serializer according to the model on azure digital twin plaftorm ([c88a63d](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/c88a63dd4f5c3267590367168e35d8e7d23aa9b8))
+
+
+### Refactoring
+
+* improve code organization ([b943af1](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/b943af18b6800ef8cc85418fea936add9e79a5a8))
+* move creation of controller inside data receiver ([2ca94e2](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/2ca94e2ad2a0607ee5567a8968dcacda9de90a84))
+* move manager in digital twin package ([ee6d25c](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/ee6d25c0309232a3d805c57b1aa15768c387f4be))
+* rename package entities to entity ([eb914db](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/eb914dbd431e253d01756cf0d36a16b6dcd57288))
+
+
+### Tests
+
+* add clean architecture test ([968ca6b](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/968ca6b9efd638f6c2311af69ce69740f0a3f9e6))
+
 ## 1.0.0 (2023-02-11)
 
 
