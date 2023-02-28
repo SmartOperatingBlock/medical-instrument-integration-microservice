@@ -1,0 +1,114 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:////PointingToDeclaration/medical-instrument-integration-microservice/[root]/index.html
+$dokka.location://main/#/PointingToDeclaration/medical-instrument-integration-microservice/[root]/main.html
+$dokka.location:application.presenter.deserializer////PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.deserializer/index.html
+$dokka.location:application.presenter.deserializer/Deserializer///PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.deserializer/-deserializer/index.html
+$dokka.location:application.presenter.deserializer/Deserializer/deserialize/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.deserializer/-deserializer/deserialize.html
+$dokka.location:application.presenter.deserializer/HL7VitalParameters.BODY_TEMPERATURE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}medical-instrument-integration-microservice/application.presenter.deserializer/-h-l7-vital-parameters/-b-o-d-y_-t-e-m-p-e-r-a-t-u-r-e/index.html
+$dokka.location:application.presenter.deserializer/HL7VitalParameters.DIASTOLIC_BLOOD_PRESSURE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}medical-instrument-integration-microservice/application.presenter.deserializer/-h-l7-vital-parameters/-d-i-a-s-t-o-l-i-c_-b-l-o-o-d_-p-r-e-s-s-u-r-e/index.html
+$dokka.location:application.presenter.deserializer/HL7VitalParameters.HEART_RATE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}medical-instrument-integration-microservice/application.presenter.deserializer/-h-l7-vital-parameters/-h-e-a-r-t_-r-a-t-e/index.html
+$dokka.location:application.presenter.deserializer/HL7VitalParameters.OXYGEN_SATURATION_IN_ARTERIAL_BLOOD///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}medical-instrument-integration-microservice/application.presenter.deserializer/-h-l7-vital-parameters/-o-x-y-g-e-n_-s-a-t-u-r-a-t-i-o-n_-i-n_-a-r-t-e-r-i-a-l_-b-l-o-o-d/index.html
+$dokka.location:application.presenter.deserializer/HL7VitalParameters.RESPIRATION_RATE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}medical-instrument-integration-microservice/application.presenter.deserializer/-h-l7-vital-parameters/-r-e-s-p-i-r-a-t-i-o-n_-r-a-t-e/index.html
+$dokka.location:application.presenter.deserializer/HL7VitalParameters.SYSTOLIC_BLOOD_PRESSURE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}medical-instrument-integration-microservice/application.presenter.deserializer/-h-l7-vital-parameters/-s-y-s-t-o-l-i-c_-b-l-o-o-d_-p-r-e-s-s-u-r-e/index.html
+$dokka.location:application.presenter.deserializer/HL7VitalParameters///PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.deserializer/-h-l7-vital-parameters/index.html
+$dokka.location:application.presenter.deserializer/HL7VitalParameters/code/#/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.deserializer/-h-l7-vital-parameters/code.html
+$dokka.location:application.presenter.deserializer/HL7VitalParameters/valueOf/#kotlin.String/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.deserializer/-h-l7-vital-parameters/value-of.html
+$dokka.location:application.presenter.deserializer/HL7VitalParameters/values/#/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.deserializer/-h-l7-vital-parameters/values.html
+$dokka.location:application.presenter.deserializer/JsonDeserializer.TelemetrySystemHl7JsonDeserializer///PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.deserializer/-json-deserializer/-telemetry-system-hl7-json-deserializer/index.html
+$dokka.location:application.presenter.deserializer/JsonDeserializer.TelemetrySystemHl7JsonDeserializer/TelemetrySystemHl7JsonDeserializer/#/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.deserializer/-json-deserializer/-telemetry-system-hl7-json-deserializer/-telemetry-system-hl7-json-deserializer.html
+$dokka.location:application.presenter.deserializer/JsonDeserializer.TelemetrySystemHl7JsonDeserializer/deserialize/#kotlin.String/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.deserializer/-json-deserializer/-telemetry-system-hl7-json-deserializer/deserialize.html
+$dokka.location:application.presenter.deserializer/JsonDeserializer///PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.deserializer/-json-deserializer/index.html
+$dokka.location:application.presenter.serializer////PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/index.html
+$dokka.location:application.presenter.serializer/JsonPatchSerializer.TelemetrySystemJSONPatchSerializer///PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-json-patch-serializer/-telemetry-system-j-s-o-n-patch-serializer/index.html
+$dokka.location:application.presenter.serializer/JsonPatchSerializer.TelemetrySystemJSONPatchSerializer/TelemetrySystemJSONPatchSerializer/#/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-json-patch-serializer/-telemetry-system-j-s-o-n-patch-serializer/-telemetry-system-j-s-o-n-patch-serializer.html
+$dokka.location:application.presenter.serializer/JsonPatchSerializer.TelemetrySystemJSONPatchSerializer/serialize/#entity.TelemetrySystem/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-json-patch-serializer/-telemetry-system-j-s-o-n-patch-serializer/serialize.html
+$dokka.location:application.presenter.serializer/JsonPatchSerializer///PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-json-patch-serializer/index.html
+$dokka.location:application.presenter.serializer/Serializer///PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-serializer/index.html
+$dokka.location:application.presenter.serializer/Serializer/serialize/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-serializer/serialize.html
+$dokka.location:application.presenter.serializer/TelemetrySystemJsonPatchPath///PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-telemetry-system-json-patch-path/index.html
+$dokka.location:application.presenter.serializer/TelemetrySystemJsonPatchPath/BEAT_PER_MINUTE/#/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-telemetry-system-json-patch-path/-b-e-a-t_-p-e-r_-m-i-n-u-t-e.html
+$dokka.location:application.presenter.serializer/TelemetrySystemJsonPatchPath/BODY_TEMPERATURE/#/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-telemetry-system-json-patch-path/-b-o-d-y_-t-e-m-p-e-r-a-t-u-r-e.html
+$dokka.location:application.presenter.serializer/TelemetrySystemJsonPatchPath/BREATH_PER_MINUTE/#/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-telemetry-system-json-patch-path/-b-r-e-a-t-h_-p-e-r_-m-i-n-u-t-e.html
+$dokka.location:application.presenter.serializer/TelemetrySystemJsonPatchPath/DIASTOLIC_BLOOD_PRESSURE/#/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-telemetry-system-json-patch-path/-d-i-a-s-t-o-l-i-c_-b-l-o-o-d_-p-r-e-s-s-u-r-e.html
+$dokka.location:application.presenter.serializer/TelemetrySystemJsonPatchPath/SATURATION/#/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-telemetry-system-json-patch-path/-s-a-t-u-r-a-t-i-o-n.html
+$dokka.location:application.presenter.serializer/TelemetrySystemJsonPatchPath/SYSTOLIC_BLOOD_PRESSURE/#/PointingToDeclaration/medical-instrument-integration-microservice/application.presenter.serializer/-telemetry-system-json-patch-path/-s-y-s-t-o-l-i-c_-b-l-o-o-d_-p-r-e-s-s-u-r-e.html
+$dokka.location:application////PointingToDeclaration/medical-instrument-integration-microservice/application/index.html
+$dokka.location:application/MedicalInstrumentController///PointingToDeclaration/medical-instrument-integration-microservice/application/-medical-instrument-controller/index.html
+$dokka.location:application/MedicalInstrumentController/MedicalInstrumentController/#application.MedicalInstrumentManager[com.azure.core.models.JsonPatchDocument]/PointingToDeclaration/medical-instrument-integration-microservice/application/-medical-instrument-controller/-medical-instrument-controller.html
+$dokka.location:application/MedicalInstrumentController/updateTelemetrySystem/#entity.TelemetrySystem/PointingToDeclaration/medical-instrument-integration-microservice/application/-medical-instrument-controller/update-telemetry-system.html
+$dokka.location:application/MedicalInstrumentManager///PointingToDeclaration/medical-instrument-integration-microservice/application/-medical-instrument-manager/index.html
+$dokka.location:application/MedicalInstrumentManager/updateMedicalInstrumentDigitalTwin/#entity.MedicalInstrument/PointingToDeclaration/medical-instrument-integration-microservice/application/-medical-instrument-manager/update-medical-instrument-digital-twin.html
+$dokka.location:entity////PointingToDeclaration/medical-instrument-integration-microservice/entity/index.html
+$dokka.location:entity/BloodPressure///PointingToDeclaration/medical-instrument-integration-microservice/entity/-blood-pressure/index.html
+$dokka.location:entity/BloodPressure/BloodPressure/#kotlin.Int#kotlin.Int/PointingToDeclaration/medical-instrument-integration-microservice/entity/-blood-pressure/-blood-pressure.html
+$dokka.location:entity/BloodPressure/diastolicBloodPressure/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-blood-pressure/diastolic-blood-pressure.html
+$dokka.location:entity/BloodPressure/systolicBloodPressure/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-blood-pressure/systolic-blood-pressure.html
+$dokka.location:entity/BodyTemperature///PointingToDeclaration/medical-instrument-integration-microservice/entity/-body-temperature/index.html
+$dokka.location:entity/BodyTemperature/BodyTemperature/#kotlin.Double#entity.UnitOfMeasurement.TemperatureUnit/PointingToDeclaration/medical-instrument-integration-microservice/entity/-body-temperature/-body-temperature.html
+$dokka.location:entity/BodyTemperature/temperature/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-body-temperature/temperature.html
+$dokka.location:entity/BodyTemperature/temperatureUnit/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-body-temperature/temperature-unit.html
+$dokka.location:entity/Heartbeat///PointingToDeclaration/medical-instrument-integration-microservice/entity/-heartbeat/index.html
+$dokka.location:entity/Heartbeat/Heartbeat/#kotlin.Int/PointingToDeclaration/medical-instrument-integration-microservice/entity/-heartbeat/-heartbeat.html
+$dokka.location:entity/Heartbeat/beatPerMinute/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-heartbeat/beat-per-minute.html
+$dokka.location:entity/MedicalInstrument///PointingToDeclaration/medical-instrument-integration-microservice/entity/-medical-instrument/index.html
+$dokka.location:entity/MedicalInstrument/medicalInstrumentID/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-medical-instrument/medical-instrument-i-d.html
+$dokka.location:entity/MedicalInstrument/patientID/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-medical-instrument/patient-i-d.html
+$dokka.location:entity/MedicalInstrumentID///PointingToDeclaration/medical-instrument-integration-microservice/entity/-medical-instrument-i-d/index.html
+$dokka.location:entity/MedicalInstrumentID/MedicalInstrumentID/#kotlin.String/PointingToDeclaration/medical-instrument-integration-microservice/entity/-medical-instrument-i-d/-medical-instrument-i-d.html
+$dokka.location:entity/MedicalInstrumentID/id/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-medical-instrument-i-d/id.html
+$dokka.location:entity/PatientID///PointingToDeclaration/medical-instrument-integration-microservice/entity/-patient-i-d/index.html
+$dokka.location:entity/PatientID/PatientID/#kotlin.String/PointingToDeclaration/medical-instrument-integration-microservice/entity/-patient-i-d/-patient-i-d.html
+$dokka.location:entity/PatientID/id/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-patient-i-d/id.html
+$dokka.location:entity/RespirationRate///PointingToDeclaration/medical-instrument-integration-microservice/entity/-respiration-rate/index.html
+$dokka.location:entity/RespirationRate/RespirationRate/#kotlin.Int/PointingToDeclaration/medical-instrument-integration-microservice/entity/-respiration-rate/-respiration-rate.html
+$dokka.location:entity/RespirationRate/breathPerMinute/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-respiration-rate/breath-per-minute.html
+$dokka.location:entity/Saturation///PointingToDeclaration/medical-instrument-integration-microservice/entity/-saturation/index.html
+$dokka.location:entity/Saturation/Saturation/#kotlin.Int/PointingToDeclaration/medical-instrument-integration-microservice/entity/-saturation/-saturation.html
+$dokka.location:entity/Saturation/percentage/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-saturation/percentage.html
+$dokka.location:entity/TelemetryData///PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-data/index.html
+$dokka.location:entity/TelemetryData/TelemetryData/#entity.BodyTemperature#entity.Saturation#entity.RespirationRate#entity.Heartbeat#entity.BloodPressure/PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-data/-telemetry-data.html
+$dokka.location:entity/TelemetryData/bloodPressure/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-data/blood-pressure.html
+$dokka.location:entity/TelemetryData/bodyTemperature/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-data/body-temperature.html
+$dokka.location:entity/TelemetryData/heartbeat/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-data/heartbeat.html
+$dokka.location:entity/TelemetryData/respirationRate/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-data/respiration-rate.html
+$dokka.location:entity/TelemetryData/saturation/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-data/saturation.html
+$dokka.location:entity/TelemetrySystem///PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-system/index.html
+$dokka.location:entity/TelemetrySystem/TelemetrySystem/#entity.MedicalInstrumentID#entity.PatientID#entity.TelemetryData/PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-system/-telemetry-system.html
+$dokka.location:entity/TelemetrySystem/medicalInstrumentID/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-system/medical-instrument-i-d.html
+$dokka.location:entity/TelemetrySystem/patientID/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-system/patient-i-d.html
+$dokka.location:entity/TelemetrySystem/telemetryData/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-telemetry-system/telemetry-data.html
+$dokka.location:entity/UnitOfMeasurement.TemperatureUnit.CELSIUS///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}medical-instrument-integration-microservice/entity/-unit-of-measurement/-temperature-unit/-c-e-l-s-i-u-s/index.html
+$dokka.location:entity/UnitOfMeasurement.TemperatureUnit.FAHRENHEIT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}medical-instrument-integration-microservice/entity/-unit-of-measurement/-temperature-unit/-f-a-h-r-e-n-h-e-i-t/index.html
+$dokka.location:entity/UnitOfMeasurement.TemperatureUnit///PointingToDeclaration/medical-instrument-integration-microservice/entity/-unit-of-measurement/-temperature-unit/index.html
+$dokka.location:entity/UnitOfMeasurement.TemperatureUnit/valueOf/#kotlin.String/PointingToDeclaration/medical-instrument-integration-microservice/entity/-unit-of-measurement/-temperature-unit/value-of.html
+$dokka.location:entity/UnitOfMeasurement.TemperatureUnit/values/#/PointingToDeclaration/medical-instrument-integration-microservice/entity/-unit-of-measurement/-temperature-unit/values.html
+$dokka.location:entity/UnitOfMeasurement///PointingToDeclaration/medical-instrument-integration-microservice/entity/-unit-of-measurement/index.html
+$dokka.location:infrastructure.api////PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.api/index.html
+$dokka.location:infrastructure.api/MedicalInstrumentDataReceiver///PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.api/-medical-instrument-data-receiver/index.html
+$dokka.location:infrastructure.api/MedicalInstrumentDataReceiver/MedicalInstrumentDataReceiver/#/PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.api/-medical-instrument-data-receiver/-medical-instrument-data-receiver.html
+$dokka.location:infrastructure.api/MedicalInstrumentDataReceiver/dispatcher/#io.ktor.server.application.Application/PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.api/-medical-instrument-data-receiver/dispatcher.html
+$dokka.location:infrastructure.api/MedicalInstrumentDataReceiver/start/#/PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.api/-medical-instrument-data-receiver/start.html
+$dokka.location:infrastructure.digitaltwin////PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.digitaltwin/index.html
+$dokka.location:infrastructure.digitaltwin//CLIENT_ID/#/PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.digitaltwin/-c-l-i-e-n-t_-i-d.html
+$dokka.location:infrastructure.digitaltwin//CLIENT_SECRET/#/PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.digitaltwin/-c-l-i-e-n-t_-s-e-c-r-e-t.html
+$dokka.location:infrastructure.digitaltwin//ENDPOINT/#/PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.digitaltwin/-e-n-d-p-o-i-n-t.html
+$dokka.location:infrastructure.digitaltwin//TENANT_ID/#/PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.digitaltwin/-t-e-n-a-n-t_-i-d.html
+$dokka.location:infrastructure.digitaltwin/DigitalTwinMedicalInstrumentManager///PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.digitaltwin/-digital-twin-medical-instrument-manager/index.html
+$dokka.location:infrastructure.digitaltwin/DigitalTwinMedicalInstrumentManager/DigitalTwinMedicalInstrumentManager/#/PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.digitaltwin/-digital-twin-medical-instrument-manager/-digital-twin-medical-instrument-manager.html
+$dokka.location:infrastructure.digitaltwin/DigitalTwinMedicalInstrumentManager/updateMedicalInstrumentDigitalTwin/#entity.MedicalInstrument/PointingToDeclaration/medical-instrument-integration-microservice/infrastructure.digitaltwin/-digital-twin-medical-instrument-manager/update-medical-instrument-digital-twin.html
+$dokka.location:infrastructure////PointingToDeclaration/medical-instrument-integration-microservice/infrastructure/index.html
+$dokka.location:infrastructure/Provider///PointingToDeclaration/medical-instrument-integration-microservice/infrastructure/-provider/index.html
+$dokka.location:infrastructure/Provider/digitalTwinMedicalInstrumentManager/#/PointingToDeclaration/medical-instrument-integration-microservice/infrastructure/-provider/digital-twin-medical-instrument-manager.html
+$dokka.location:usecase.repository////PointingToDeclaration/medical-instrument-integration-microservice/usecase.repository/index.html
+$dokka.location:usecase.repository/TelemetrySystemRepository///PointingToDeclaration/medical-instrument-integration-microservice/usecase.repository/-telemetry-system-repository/index.html
+$dokka.location:usecase.repository/TelemetrySystemRepository/updateTelemetrySystem/#entity.TelemetrySystem/PointingToDeclaration/medical-instrument-integration-microservice/usecase.repository/-telemetry-system-repository/update-telemetry-system.html
+application
+application.presenter.deserializer
+application.presenter.serializer
+entity
+infrastructure
+infrastructure.api
+infrastructure.digitaltwin
+usecase.repository
+
