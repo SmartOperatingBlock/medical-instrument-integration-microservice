@@ -1,0 +1,52 @@
+openapi: 3.0.0
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/GIACOMOACCURSI_1/MedicalInstrument/1.0.0
+  - description: Medical Instrument Integration microservice
+    url: http://localhost:<port>/
+info:
+  description: This is the API of the Medical Instrument Integration microservice within the Smart Operating Block project
+  version: 1.0.0
+  title: Medical Instrument API
+  contact:
+    email: info@smartoperatingblock.com
+  license:
+    name: MIT License
+    url: 'https://opensource.org/license/mit/'
+
+tags:
+  - name: Telemetry System API
+    description: This is the available API to update Telemetry System data within the Operating Block.
+
+paths:
+  /telemetrySystem:
+    put:
+      tags:
+        - Telemetry System API
+      summary: update telemetry system data
+      operationId: updateTelemetrySystemData
+      description: update telemetry system data
+      responses:
+        '200':
+          description: telemetry system data updated
+        '400':
+          description: invalid input, object invalid
+        '409':
+          description: a room with the same id already exists
+        '500':
+          description: server error occurred
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Fhir-Json-Resource'
+        description: Telemetry System Data
+
+
+
+components:
+  schemas:
+    Fhir-Json-Resource:
+      type: object
+      description: A fhir json resource
