@@ -9,7 +9,7 @@
 package application
 
 import com.azure.core.models.JsonPatchDocument
-import entities.TelemetrySystem
+import entity.TelemetrySystem
 import usecase.repository.TelemetrySystemRepository
 
 /**

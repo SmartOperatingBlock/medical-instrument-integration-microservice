@@ -6,7 +6,7 @@
  * https://opensource.org/licenses/MIT.
  */
 
-package entities
+package entity
 
 /**
  * Represents the telemetry data retrieved from a telemetry system.

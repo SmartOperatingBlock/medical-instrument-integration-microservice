@@ -8,7 +8,7 @@
 
 package application
 
-import entities.MedicalInstrument
+import entity.MedicalInstrument
 
 /**
  * Generic manager of a Medical Instrument.

@@ -8,7 +8,7 @@
 
 package usecase.repository
 
-import entities.TelemetrySystem
+import entity.TelemetrySystem
 
 /**
  * Interface that models the repository for [TelemetrySystem].

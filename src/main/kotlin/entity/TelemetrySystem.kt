@@ -6,7 +6,7 @@
  * https://opensource.org/licenses/MIT.
  */
 
-package entities
+package entity
 
 /**
  * The telemetry system present in the operating room.

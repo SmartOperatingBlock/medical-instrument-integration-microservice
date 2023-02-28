@@ -8,15 +8,15 @@
 
 package application.presenter.deserializer
 import ca.uhn.fhir.context.FhirContext
-import entities.BloodPressure
-import entities.BodyTemperature
-import entities.Heartbeat
-import entities.MedicalInstrumentID
-import entities.PatientID
-import entities.RespirationRate
-import entities.Saturation
-import entities.TelemetryData
-import entities.TelemetrySystem
+import entity.BloodPressure
+import entity.BodyTemperature
+import entity.Heartbeat
+import entity.MedicalInstrumentID
+import entity.PatientID
+import entity.RespirationRate
+import entity.Saturation
+import entity.TelemetryData
+import entity.TelemetrySystem
 import org.hl7.fhir.r4.model.Observation
 
 /**

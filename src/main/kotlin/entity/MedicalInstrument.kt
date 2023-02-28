@@ -6,7 +6,7 @@
  * https://opensource.org/licenses/MIT.
  */
 
-package entities
+package entity
 
 /**
  * A generic interface of a medical instrument.

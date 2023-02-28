@@ -15,7 +15,7 @@ import application.presenter.serializer.TelemetrySystemJsonPatchPath.DIASTOLIC_B
 import application.presenter.serializer.TelemetrySystemJsonPatchPath.SATURATION
 import application.presenter.serializer.TelemetrySystemJsonPatchPath.SYSTOLIC_BLOOD_PRESSURE
 import com.azure.core.models.JsonPatchDocument
-import entities.TelemetrySystem
+import entity.TelemetrySystem
 
 /**
  * A json serializer.

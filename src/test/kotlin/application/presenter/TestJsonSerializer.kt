@@ -9,16 +9,16 @@
 package application.presenter
 
 import application.presenter.serializer.JsonPatchSerializer
-import entities.BloodPressure
-import entities.BodyTemperature
-import entities.Heartbeat
-import entities.MedicalInstrumentID
-import entities.PatientID
-import entities.RespirationRate
-import entities.Saturation
-import entities.TelemetryData
-import entities.TelemetrySystem
-import entities.UnitOfMeasurement
+import entity.BloodPressure
+import entity.BodyTemperature
+import entity.Heartbeat
+import entity.MedicalInstrumentID
+import entity.PatientID
+import entity.RespirationRate
+import entity.Saturation
+import entity.TelemetryData
+import entity.TelemetrySystem
+import entity.UnitOfMeasurement
 import io.kotest.assertions.throwables.shouldNotThrow
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe

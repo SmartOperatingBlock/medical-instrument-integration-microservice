@@ -14,8 +14,8 @@ import com.azure.digitaltwins.core.DigitalTwinsClient
 import com.azure.digitaltwins.core.DigitalTwinsClientBuilder
 import com.azure.digitaltwins.core.implementation.models.ErrorResponseException
 import com.azure.identity.ClientSecretCredentialBuilder
-import entities.MedicalInstrument
-import entities.TelemetrySystem
+import entity.MedicalInstrument
+import entity.TelemetrySystem
 
 /**
  * The Azure endpoint.
