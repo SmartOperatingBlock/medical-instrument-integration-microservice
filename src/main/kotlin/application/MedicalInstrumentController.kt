@@ -21,6 +21,8 @@ class MedicalInstrumentController(
 
     /**
      * Updates the telemetry system.
+     * @param telemetrySystem the telemetry system to update.
+     * @return true if the update is successful, false otherwise.
      */
     override fun updateTelemetrySystem(telemetrySystem: TelemetrySystem): Boolean =
         manager.updateMedicalInstrumentDigitalTwin(telemetrySystem)

@@ -15,6 +15,8 @@ interface Deserializer <I, O> {
 
     /**
      * Deserializes the data.
+     * @param data the data to deserialize.
+     * @return an object corresponding to the data deserialized.
      */
     fun deserialize(data: I): O
 }

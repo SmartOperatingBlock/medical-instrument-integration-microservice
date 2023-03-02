@@ -55,8 +55,7 @@ class DigitalTwinMedicalInstrumentManager : MedicalInstrumentManager<JsonPatchDo
 
     /**
      * Updates the digital twin.
-     * @param medicalInstrumentID the id of the digital twin to update.
-     * @param command the json with the instruction to update the digital twin.
+     * @param medicalInstrument the medical instrument.
      */
     override fun updateMedicalInstrumentDigitalTwin(medicalInstrument: MedicalInstrument): Boolean {
         return try {
@@ -71,6 +70,7 @@ class DigitalTwinMedicalInstrumentManager : MedicalInstrumentManager<JsonPatchDo
     /**
      * Given the medical instrument, creates the command serializing the content.
      * @param medicalInstrument the medical instrument.
+     * @return a json patch document.
      */
     private fun createCommand(medicalInstrument: MedicalInstrument): JsonPatchDocument {
         val serializer = JsonPatchSerializer.TelemetrySystemJSONPatchSerializer()

@@ -35,6 +35,7 @@ class MedicalInstrumentDataReceiver {
 
     /**
      * Dispatcher for http requests.
+     * @param app the application, capable of handling request.
      */
     fun dispatcher(app: Application) {
         with(app) {
@@ -44,6 +45,7 @@ class MedicalInstrumentDataReceiver {
 
     /**
      * Receive data about telemetry system.
+     * @param app the application, capable of handling request.
      */
     private fun receiveTelemetrySystemData(app: Application) {
         with(app) {

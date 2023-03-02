@@ -27,9 +27,6 @@ object JsonPatchSerializer {
      */
     class TelemetrySystemJSONPatchSerializer : Serializer<TelemetrySystem, JsonPatchDocument> {
 
-        /**
-         * Deserializes the json returning an instance of [TelemetrySystem].
-         */
         override fun serialize(entity: TelemetrySystem): JsonPatchDocument {
             return JsonPatchDocument()
                 .appendAdd(SYSTOLIC_BLOOD_PRESSURE, entity.telemetryData.bloodPressure.systolicBloodPressure)

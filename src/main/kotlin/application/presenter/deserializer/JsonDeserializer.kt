@@ -29,10 +29,6 @@ object JsonDeserializer {
      */
     class TelemetrySystemHl7JsonDeserializer : Deserializer<String, TelemetrySystem> {
 
-        /**
-         * Deserializes the json returning an instance of [TelemetrySystem].
-         *
-         */
         override fun deserialize(data: String): TelemetrySystem {
             val parser = FhirContext.forR4().newJsonParser()
             val observation = parser.parseResource(Observation::class.java, data)
@@ -58,11 +54,16 @@ object JsonDeserializer {
 
     /**
      * Maps code of a parameter with its value.
+     * @return a list of the codes.
      */
     private fun Observation.listOfCodes() =
         component.map {
             it.code.coding.first().code
         }
 
+    /**
+     * Get the value given the code.
+     * @param code the code whose value you want.
+     */
     private fun Observation.getValueFromCode(code: String) = component[listOfCodes().indexOf(code)].valueQuantity.value
 }

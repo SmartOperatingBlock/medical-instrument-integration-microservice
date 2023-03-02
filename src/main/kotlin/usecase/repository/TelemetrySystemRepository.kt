@@ -16,7 +16,7 @@ import entity.TelemetrySystem
 interface TelemetrySystemRepository {
     /**
      * Updates the [TelemetrySystem].
-     * @retur true if the telemetry system was updated, false otherwise.
+     * @return true if the telemetry system was updated, false otherwise.
      */
     fun updateTelemetrySystem(telemetrySystem: TelemetrySystem): Boolean
 }

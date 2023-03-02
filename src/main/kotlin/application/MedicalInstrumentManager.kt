@@ -18,6 +18,7 @@ interface MedicalInstrumentManager<T> {
     /**
      * Integrate the medical instrument Data in our system.
      * @param medicalInstrument the medical instrument with updated data.
+     * @return true if the update is successful, false otherwise.
      */
     fun updateMedicalInstrumentDigitalTwin(medicalInstrument: MedicalInstrument): Boolean
 }

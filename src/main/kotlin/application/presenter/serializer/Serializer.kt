@@ -15,6 +15,8 @@ interface Serializer<I, O> {
 
     /**
      * Serializes an entity.
+     * @param entity the entity to serialize.
+     * @return the serialized entity.
      */
     fun serialize(entity: I): O
 }
