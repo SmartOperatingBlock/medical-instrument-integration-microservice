@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/compare/1.1.0...1.1.1) (2023-03-02)
+
+
+### Documentation
+
+* improve doc ([8cd4673](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/8cd4673ef911f79be4ad0848ce59decf1952a050))
+
 ## [1.1.0](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/compare/1.0.0...1.1.0) (2023-03-02)
 
 
