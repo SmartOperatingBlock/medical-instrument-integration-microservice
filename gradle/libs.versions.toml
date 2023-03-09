@@ -1,7 +1,7 @@
 [versions]
 kotlin = "1.8.10"
 kotest = "5.5.5"
-ktor = "2.3.0-eap-620"
+ktor = "2.3.0-eap-621"
 hapi = "6.4.2"
 
 [libraries]
