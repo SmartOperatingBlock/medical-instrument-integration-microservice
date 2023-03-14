@@ -23,6 +23,6 @@ archunit = { module = "com.tngtech.archunit:archunit-junit5", version = "1.0.1" 
 kotlin-testing = ["archunit", "kotest-junit5", "kotest-assertions-core", "kotest-assertions-core-jvm"]
 
 [plugins]
-dokka = { id ="org.jetbrains.dokka", version = "1.7.20" }
+dokka = { id ="org.jetbrains.dokka", version = "1.8.10" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-qa = { id = "org.danilopianini.gradle-kotlin-qa", version = "0.36.1" }
