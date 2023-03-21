@@ -37,7 +37,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: ${{ matrix.java-version }}
           distribution: adopt
       - name: Run quality assurance and test with coverage
         run: ./gradlew clean check
