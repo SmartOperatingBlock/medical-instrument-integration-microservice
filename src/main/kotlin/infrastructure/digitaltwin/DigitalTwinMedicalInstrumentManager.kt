@@ -10,47 +10,26 @@ package infrastructure.digitaltwin
 import application.MedicalInstrumentManager
 import application.presenter.serializer.JsonPatchSerializer
 import com.azure.core.models.JsonPatchDocument
-import com.azure.digitaltwins.core.DigitalTwinsClient
 import com.azure.digitaltwins.core.DigitalTwinsClientBuilder
 import com.azure.digitaltwins.core.implementation.models.ErrorResponseException
-import com.azure.identity.ClientSecretCredentialBuilder
+import com.azure.identity.DefaultAzureCredentialBuilder
 import entity.MedicalInstrument
 import entity.TelemetrySystem
-
-/**
- * The Azure endpoint.
- */
-const val ENDPOINT = "https://digital-twin-layer.api.neu.digitaltwins.azure.net"
-
-/**
- * The Azure tenant id.
- */
-const val TENANT_ID = "8e97c84a-c23e-4463-8faf-d9a974450bc1"
-
-/**
- * The Azure client id.
- */
-const val CLIENT_ID = "52e143e0-1993-436f-ac31-8ba5787445e4"
-
-/**
- * The Azure client secret.
- */
-const val CLIENT_SECRET = "zuu8Q~0JA2NnKpnXEDMyew4WdBcw.XIjYWwK8b1R"
 
 /**
  * Manager that manage the update of the digital twin on Azure digital twin platform.
  */
 class DigitalTwinMedicalInstrumentManager : MedicalInstrumentManager<JsonPatchDocument> {
+    init {
+        checkNotNull(System.getenv(dtAppIdVariable)) { "azure client app id required" }
+        checkNotNull(System.getenv(dtTenantVariable)) { "azure tenant id required" }
+        checkNotNull(System.getenv(dtAppSecretVariable)) { "azure client secret id required" }
+        checkNotNull(System.getenv(dtEndpointVariable)) { "azure dt endpoint required" }
+    }
 
-    private val client: DigitalTwinsClient = DigitalTwinsClientBuilder()
-        .credential(
-            ClientSecretCredentialBuilder()
-                .tenantId(TENANT_ID)
-                .clientId(CLIENT_ID)
-                .clientSecret(CLIENT_SECRET)
-                .build()
-        )
-        .endpoint(ENDPOINT)
+    private val client = DigitalTwinsClientBuilder()
+        .credential(DefaultAzureCredentialBuilder().build())
+        .endpoint(System.getenv(dtEndpointVariable))
         .buildClient()
 
     /**
@@ -78,5 +57,12 @@ class DigitalTwinMedicalInstrumentManager : MedicalInstrumentManager<JsonPatchDo
             is TelemetrySystem -> return serializer.serialize(medicalInstrument)
             else -> throw UnsupportedOperationException()
         }
+    }
+
+    companion object {
+        private const val dtAppIdVariable = "AZURE_CLIENT_ID"
+        private const val dtTenantVariable = "AZURE_TENANT_ID"
+        private const val dtAppSecretVariable = "AZURE_CLIENT_SECRET"
+        private const val dtEndpointVariable = "AZURE_DT_ENDPOINT"
     }
 }
