@@ -1,3 +1,23 @@
+## [1.1.4](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/compare/1.1.3...1.1.4) (2023-04-04)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin.jvm to v1.8.20 ([9586f59](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/9586f592db7dbf53e0c3ea4d71ed54452043139d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.20 ([bbee59d](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/bbee59d3ebc63d0193b7c9d825b0cbf9ae09cdf8))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.21 ([f79a7cf](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/f79a7cfee9fa3adc66eb7fc27ea871b31ac4d578))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.22 ([4e208ef](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/4e208ef792c175e1b9d097c632830419c057137c))
+* **deps:** update ktor to v2.3.0-eap-629 ([1cb10ae](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/1cb10aec71d7b0ded52ec0b0f873cf8417da023b))
+* **deps:** update ktor to v2.3.0-eap-630 ([398a18c](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/398a18cf459ecbaf78a91cf9802e7ae0a3b0dc63))
+* **deps:** update ktor to v2.3.0-eap-631 ([ae09056](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/ae09056e19c34b3832908a0706e48740f7c21596))
+* **deps:** update ktor to v2.3.0-eap-632 ([3e47472](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/3e47472709677a9308ac5b7b6ebe82ccb4a2f724))
+* **deps:** update ktor to v2.3.0-eap-633 ([dafadb9](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/dafadb9adb27c52032ebf13df4b9fc04053e9ec8))
+* **deps:** update ktor to v2.3.0-eap-634 ([680fe5b](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/680fe5b0d42e52f34519ca3dadeb42ffe9451080))
+* **deps:** update ktor to v2.3.0-eap-635 ([402d79c](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/402d79c222d63693247172979934ea1929ded296))
+* **deps:** update ktor to v2.3.0-eap-636 ([67400eb](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/67400ebedfe9d78d48a4bddcbff390898c133d87))
+* **deps:** update ktor to v2.3.0-eap-638 ([046bf3d](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/046bf3d0288c5771a2bb2c29a8a5704dc0af9945))
+* **deps:** update plugin com.gradle.enterprise to v3.12.6 ([b9876ac](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/b9876ac933d5239fa9c2dbcb99266a2a07c0df3f))
+
 ## [1.1.3](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/compare/1.1.2...1.1.3) (2023-03-23)
 
 
