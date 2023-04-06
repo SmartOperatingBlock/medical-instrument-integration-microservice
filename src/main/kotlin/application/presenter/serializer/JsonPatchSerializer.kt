@@ -25,16 +25,19 @@ object JsonPatchSerializer {
     /**
      *  A json deserializer implementation for [TelemetrySystem].
      */
-    class TelemetrySystemJSONPatchSerializer : Serializer<TelemetrySystem, JsonPatchDocument> {
+    class TelemetrySystemJSONPatchSerializer : Serializer<TelemetrySystem, List<JsonPatchDocument>> {
 
-        override fun serialize(entity: TelemetrySystem): JsonPatchDocument {
-            return JsonPatchDocument()
-                .appendAdd(SYSTOLIC_BLOOD_PRESSURE, entity.telemetryData.bloodPressure.systolicBloodPressure)
-                .appendAdd(DIASTOLIC_BLOOD_PRESSURE, entity.telemetryData.bloodPressure.diastolicBloodPressure)
-                .appendAdd(BODY_TEMPERATURE, entity.telemetryData.bodyTemperature.temperature)
-                .appendAdd(BEAT_PER_MINUTE, entity.telemetryData.heartbeat.beatPerMinute)
-                .appendAdd(BREATH_PER_MINUTE, entity.telemetryData.respirationRate.breathPerMinute)
-                .appendAdd(SATURATION, entity.telemetryData.saturation.percentage)
+        override fun serialize(entity: TelemetrySystem): List<JsonPatchDocument> {
+            return listOf(
+                JsonPatchDocument()
+                    .appendAdd(SYSTOLIC_BLOOD_PRESSURE, entity.telemetryData.bloodPressure.systolicBloodPressure),
+                JsonPatchDocument()
+                    .appendAdd(DIASTOLIC_BLOOD_PRESSURE, entity.telemetryData.bloodPressure.diastolicBloodPressure),
+                JsonPatchDocument().appendAdd(BODY_TEMPERATURE, entity.telemetryData.bodyTemperature.temperature),
+                JsonPatchDocument().appendAdd(BEAT_PER_MINUTE, entity.telemetryData.heartbeat.beatPerMinute),
+                JsonPatchDocument().appendAdd(BREATH_PER_MINUTE, entity.telemetryData.respirationRate.breathPerMinute),
+                JsonPatchDocument().appendAdd(SATURATION, entity.telemetryData.saturation.percentage)
+            )
         }
     }
 }

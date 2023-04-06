@@ -38,7 +38,9 @@ class DigitalTwinMedicalInstrumentManager : MedicalInstrumentManager<JsonPatchDo
      */
     override fun updateMedicalInstrumentDigitalTwin(medicalInstrument: MedicalInstrument): Boolean {
         return try {
-            client.updateDigitalTwin(medicalInstrument.patientID.id, createCommand(medicalInstrument))
+            createCommand(medicalInstrument).forEach {
+                client.updateDigitalTwin(medicalInstrument.patientID.id, it)
+            }
             true
         } catch (e: ErrorResponseException) {
             println(e)
@@ -51,7 +53,7 @@ class DigitalTwinMedicalInstrumentManager : MedicalInstrumentManager<JsonPatchDo
      * @param medicalInstrument the medical instrument.
      * @return a json patch document.
      */
-    private fun createCommand(medicalInstrument: MedicalInstrument): JsonPatchDocument {
+    private fun createCommand(medicalInstrument: MedicalInstrument): List<JsonPatchDocument> {
         val serializer = JsonPatchSerializer.TelemetrySystemJSONPatchSerializer()
         when (medicalInstrument) {
             is TelemetrySystem -> return serializer.serialize(medicalInstrument)
