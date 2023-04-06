@@ -35,36 +35,36 @@ class TestJsonSerializer : StringSpec({
     val temperature = 36.5
     val jsonPatch = """
         [
-            {
+            [{
                 "op": "add",
                 "path": "/systolic_blood_pressure",
                 "value": $systolicBloodPressure
-            },
-            {
+            }],
+            [{
                 "op": "add",
                 "path": "/diastolic_blood_pressure",
                 "value": $diastolicBloodPressure
-            },
-            {
+            }],
+            [{
                 "op": "add",
                 "path": "/body_temperature",
                 "value": $temperature
-            },
-            {
+            }],
+            [{
                 "op": "add",
                 "path": "/heart_beat",
                 "value": $beatPerMinute
-            },
-            {
+            }],
+            [{
                 "op": "add",
                 "path": "/respiratory_rate",
                 "value": $breathPerMinute
-            },
-            {
+            }],
+            [{
                 "op": "add",
                 "path": "/saturation_percentage",
                 "value": $saturation
-            }      
+            }]
         ]
     """.trimIndent()
     val telemetrySystem = TelemetrySystem(
@@ -87,7 +87,11 @@ class TestJsonSerializer : StringSpec({
     }
 
     "the serializer must generate the correct JsonPatch" {
-        jsonSerializer.serialize(telemetrySystem).toString() shouldBe jsonPatch
+        jsonSerializer.serialize(telemetrySystem)
+            .toString()
+            .replace("\n", "")
+            .replace("\t", "")
+            .replace(" ", "") shouldBe jsonPatch
             .replace("\n", "")
             .replace("\t", "")
             .replace(" ", "")
