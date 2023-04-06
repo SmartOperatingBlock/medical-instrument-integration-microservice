@@ -1,3 +1,21 @@
+## [1.2.0](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/compare/1.1.4...1.2.0) (2023-04-06)
+
+
+### Features
+
+* now the service make a patch for every medical instrument data instead a single update ([fe171e2](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/fe171e2b9c71098a0fd3b8157244747598774019))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.23 ([4de78e8](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/4de78e8843a9f8aed9a31173b8c26ffc1f8e2569))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.6 ([b0677dd](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/b0677dd168d7908bc486e88f36f12b69942981c1))
+
+
+### Tests
+
+* test new serialization ([d09a65f](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/d09a65f9e15dbe40d7fca055613cb58341c2c56f))
+
 ## [1.1.4](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/compare/1.1.3...1.1.4) (2023-04-04)
 
 
