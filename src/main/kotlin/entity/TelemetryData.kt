@@ -21,7 +21,7 @@ class TelemetryData(
     val saturation: Saturation,
     val respirationRate: RespirationRate,
     val heartbeat: Heartbeat,
-    val bloodPressure: BloodPressure
+    val bloodPressure: BloodPressure,
 )
 
 /**
@@ -31,7 +31,7 @@ class TelemetryData(
  */
 data class BodyTemperature(
     val temperature: Double,
-    val temperatureUnit: UnitOfMeasurement.TemperatureUnit = UnitOfMeasurement.TemperatureUnit.CELSIUS
+    val temperatureUnit: UnitOfMeasurement.TemperatureUnit = UnitOfMeasurement.TemperatureUnit.CELSIUS,
 )
 
 /**
@@ -82,6 +82,6 @@ object UnitOfMeasurement {
      */
     enum class TemperatureUnit {
         CELSIUS,
-        FAHRENHEIT
+        FAHRENHEIT,
     }
 }

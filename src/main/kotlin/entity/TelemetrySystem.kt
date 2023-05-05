@@ -17,5 +17,5 @@ package entity
 class TelemetrySystem(
     override val medicalInstrumentID: MedicalInstrumentID,
     override val patientID: PatientID,
-    val telemetryData: TelemetryData
+    val telemetryData: TelemetryData,
 ) : MedicalInstrument

@@ -52,8 +52,8 @@ class MedicalInstrumentDataReceiver {
             routing {
                 post("/telemetrySystem") {
                     if (MedicalInstrumentController(Provider.digitalTwinMedicalInstrumentManager)
-                        .updateTelemetrySystem(
-                                JsonDeserializer.TelemetrySystemHl7JsonDeserializer().deserialize(call.receiveText())
+                            .updateTelemetrySystem(
+                                JsonDeserializer.TelemetrySystemHl7JsonDeserializer().deserialize(call.receiveText()),
                             )
                     ) {
                         call.respond(HttpStatusCode.OK)

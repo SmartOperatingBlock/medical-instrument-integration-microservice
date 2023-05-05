@@ -11,7 +11,7 @@ package application.presenter.deserializer
 /**
  * Interface of a generic data deserializer.
  */
-interface Deserializer <I, O> {
+interface Deserializer<I, O> {
 
     /**
      * Deserializes the data.

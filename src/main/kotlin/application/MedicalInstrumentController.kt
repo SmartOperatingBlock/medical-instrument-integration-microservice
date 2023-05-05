@@ -16,7 +16,7 @@ import usecase.repository.TelemetrySystemRepository
  * A controller for medical instrument.
  */
 class MedicalInstrumentController(
-    private val manager: MedicalInstrumentManager<JsonPatchDocument>
+    private val manager: MedicalInstrumentManager<JsonPatchDocument>,
 ) : TelemetrySystemRepository {
 
     /**

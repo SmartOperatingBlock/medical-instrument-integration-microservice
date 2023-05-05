@@ -75,8 +75,8 @@ class TestJsonSerializer : StringSpec({
             Saturation(saturation),
             RespirationRate(breathPerMinute),
             Heartbeat(beatPerMinute),
-            BloodPressure(diastolicBloodPressure, systolicBloodPressure)
-        )
+            BloodPressure(diastolicBloodPressure, systolicBloodPressure),
+        ),
     )
     val jsonSerializer = JsonPatchSerializer.TelemetrySystemJSONPatchSerializer()
 

@@ -27,7 +27,7 @@ class CleanArchitectureTest : StringSpec({
             .check(
                 ClassFileImporter()
                     .withImportOption { !it.contains("/test/") } // ignore tests classes
-                    .importPackages("entity", "usecase", "application", "infrastructure")
+                    .importPackages("entity", "usecase", "application", "infrastructure"),
             )
     }
 })
