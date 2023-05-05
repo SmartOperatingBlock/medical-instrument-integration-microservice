@@ -37,7 +37,7 @@ object JsonDeserializer {
             val bodyTemperature =
                 BodyTemperature(observation.getValueFromCode(HL7VitalParameters.BODY_TEMPERATURE.code).toDouble())
             val saturation = Saturation(
-                observation.getValueFromCode(HL7VitalParameters.OXYGEN_SATURATION_IN_ARTERIAL_BLOOD.code).toInt()
+                observation.getValueFromCode(HL7VitalParameters.OXYGEN_SATURATION_IN_ARTERIAL_BLOOD.code).toInt(),
             )
             val respirationRate =
                 RespirationRate(observation.getValueFromCode(HL7VitalParameters.RESPIRATION_RATE.code).toInt())

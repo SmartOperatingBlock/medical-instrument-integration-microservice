@@ -36,7 +36,7 @@ object JsonPatchSerializer {
                 JsonPatchDocument().appendAdd(BODY_TEMPERATURE, entity.telemetryData.bodyTemperature.temperature),
                 JsonPatchDocument().appendAdd(BEAT_PER_MINUTE, entity.telemetryData.heartbeat.beatPerMinute),
                 JsonPatchDocument().appendAdd(BREATH_PER_MINUTE, entity.telemetryData.respirationRate.breathPerMinute),
-                JsonPatchDocument().appendAdd(SATURATION, entity.telemetryData.saturation.percentage)
+                JsonPatchDocument().appendAdd(SATURATION, entity.telemetryData.saturation.percentage),
             )
         }
     }
