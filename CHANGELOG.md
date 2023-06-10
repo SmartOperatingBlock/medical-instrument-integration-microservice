@@ -1,3 +1,24 @@
+## [1.2.3](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/compare/1.2.2...1.2.3) (2023-06-10)
+
+
+### Build and continuous integration
+
+* **deps:** update smartoperatingblock/release-and-delivery-action action to v1.0.1 ([b2f40bf](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/b2f40bf4b371772f9c09b66fd246b9037ac8f33c))
+* **deps:** update smartoperatingblock/release-and-delivery-action action to v1.0.2 ([70fc338](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/70fc33884e50e362e24772d7c72e1723dd74b59e))
+
+
+### Documentation
+
+* **deps:** update plugin dokka to v1.8.20 ([ee9ef71](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/ee9ef710f7149addcdcc9143d8d142e76da5d04d))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.33 ([89f1b7d](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/89f1b7d234b363d12caeab48cca182de1a8298c1))
+* **deps:** update ktor to v2.3.2-eap-692 ([0f99d3a](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/0f99d3ac01b8b2f68da94971ddc7a66641ccebd2))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.8 ([4bb254b](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/4bb254bfe98a3a0880e0b67dc2a430c961502710))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.9 ([7fcffb9](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/commit/7fcffb91ea6afa0c24d0920ad931c7179d4f0e93))
+
 ## [1.2.2](https://github.com/SmartOperatingBlock/medical-instrument-integration-microservice/compare/1.2.1...1.2.2) (2023-06-08)
 
 
