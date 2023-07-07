@@ -32,6 +32,8 @@ paths:
           description: telemetry system data updated
         '400':
           description: invalid input, object invalid
+        '409':
+          description: a room with the same id already exists
         '500':
           description: server error occurred
       requestBody:
