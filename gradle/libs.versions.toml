@@ -2,7 +2,7 @@
 kotlin = "1.9.0"
 kotest = "5.6.2"
 ktor = "2.3.3-eap-719"
-hapi = "6.6.1"
+hapi = "6.6.2"
 
 [libraries]
 google-gson = {module = "com.google.code.gson:gson", version = "2.10.1"}
