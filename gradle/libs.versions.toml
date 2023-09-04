@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.9.10"
-kotest = "5.7.0"
+kotest = "5.7.1"
 ktor = "3.0.0-eap-786"
 hapi = "6.8.0"
 
