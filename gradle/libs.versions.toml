@@ -1,5 +1,5 @@
 [versions]
-kotlin = "1.9.10"
+kotlin = "1.9.20"
 kotest = "5.7.2"
 ktor = "3.0.0-eap-806"
 hapi = "6.8.5"
