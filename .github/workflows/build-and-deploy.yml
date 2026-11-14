@@ -42,7 +42,7 @@ jobs:
       - name: Run quality assurance and test with coverage
         run: ./gradlew clean check
       - name: CodeCov
-        uses: codecov/codecov-action@v3.1.4
+        uses: codecov/codecov-action@v3.1.6
         with:
           directory: "build/reports/jacoco"
 
